@@ -13,8 +13,11 @@ let config = {
     // "object-fit-polyfill",
   ],
   "addStyleBefore": [
-    "src/scss/variables.scss",
-    "src/scss/mixins.scss"
+    "src/scss/basic.scss",
+    "src/scss/fonts.scss",
+    "src/scss/libs.scss",
+    "src/scss/mixins.scss",
+    "src/scss/vars.scss"
   ],
   "addStyleAfter": [
     // "src/scss/print.scss"
