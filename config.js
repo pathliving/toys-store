@@ -1,0 +1,42 @@
+/* global module */
+
+let config = {
+  "notGetBlocks": [
+    //"blocks-demo.html"
+  ],
+  "ignoredBlocks": [
+    "no-js"
+  ],
+  "alwaysAddBlocks": [
+    // "sprite-svg",
+    // "sprite-png",
+    // "object-fit-polyfill",
+  ],
+  "addStyleBefore": [
+    "src/scss/variables.scss",
+    "src/scss/mixins.scss"
+  ],
+  "addStyleAfter": [
+    // "src/scss/print.scss"
+  ],
+  "addJsBefore": [],
+  "addJsAfter": [
+    "./script.js"
+  ],
+  "addAssets": {
+    "src/fonts/OpenSans-Light.ttf": "fonts/",
+    "src/fonts/OpenSans.ttf": "fonts/",
+    "src/fonts/OpenSans-Semibold.ttf": "fonts/",
+    "src/fonts/OpenSans-Bold.ttf": "fonts/",
+    "src/img/demo-avatar-*": "img/",
+    // "src/img/DSC_*": "img/",
+    // "src/favicon/*.{png,ico,svg,xml,webmanifest}": "img/favicon",
+  },
+  "dir": {
+    "src": "src/",
+    "build": "build/",
+    "blocks": "src/blocks/"
+  }
+};
+
+module.exports = config;
