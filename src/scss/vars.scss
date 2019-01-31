@@ -1,3 +1,5 @@
+@import "src/scss/fonts.scss";
+
 // Basic colors https://colorscheme.ru/color-converter.html
 $black:                       hsl(0, 0%, 0%);
 $gray-darkest:                hsl(0, 0%, 10%);
@@ -47,3 +49,6 @@ $typo-margin-vertical:        1em;
 $main-font:                   -apple-system, BlinkMacSystemFont, 'Open Sans', 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 $main0-font--monospace:       SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 // Georgia, Times New Roman, Times, serif
+
+// Other
+$content-size: 1140px;
