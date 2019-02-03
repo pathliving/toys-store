@@ -30,6 +30,7 @@ const spritesmith = require('gulp.spritesmith');
 const merge = require('merge-stream');
 const imagemin = require('gulp-imagemin');
 const prettyHtml = require('gulp-pretty-html');
+const replace = require('gulp-replace');
 const ghpages = require('gh-pages');
 const path = require('path');
 
@@ -97,6 +98,9 @@ function compilePug() {
     .pipe(debug({title: 'Compiles '}))
     .pipe(pug(pugOption))
     .pipe(prettyHtml(prettyOption))
+    .pipe(replace(/^(\s*)(<button.+?>)(.*)(<\/button>)/gm, '$1$2\n$1  $3\n$1$4'))
+    .pipe(replace(/^( *)(<.+?>)(<script>)([\s\S]*)(<\/script>)/gm, '$1$2\n$1$3\n$4\n$1$5\n'))
+    .pipe(replace(/^( *)(<.+?>)(<script\s+src.+>)(?:[\s\S]*)(<\/script>)/gm, '$1$2\n$1$3$4'))
     .pipe(through2.obj(getClassesToBlocksList))
     .pipe(dest(dir.build));
 }
@@ -118,6 +122,9 @@ function compilePugFast() {
     .pipe(debug({title: 'Compiles '}))
     .pipe(pug(pugOption))
     .pipe(prettyHtml(prettyOption))
+    .pipe(replace(/^(\s*)(<button.+?>)(.*)(<\/button>)/gm, '$1$2\n$1  $3\n$1$4'))
+    .pipe(replace(/^( *)(<.+?>)(<script>)([\s\S]*)(<\/script>)/gm, '$1$2\n$1$3\n$4\n$1$5\n'))
+    .pipe(replace(/^( *)(<.+?>)(<script\s+src.+>)(?:[\s\S]*)(<\/script>)/gm, '$1$2\n$1$3$4'))
     .pipe(through2.obj(getClassesToBlocksList))
     .pipe(dest(dir.build));
 }
@@ -149,9 +156,6 @@ function copyImg(cb) {
       await cpy(copiedImages, `${dir.build}img`);
       cb();
     })();
-  }
-  else {
-    cb();
   }
 }
 exports.copyImg = copyImg;
@@ -500,7 +504,7 @@ function filterShowCode(text, options) {
   var result = '<pre class="code">\n';
   if (typeof(options['first-line']) !== 'undefined') result = result + '<code>' + options['first-line'] + '</code>\n';
   for (var i = 0; i < (lines.length - 1); i++) { // (lines.length - 1) для срезания последней строки (пустая)
-    result = result + '<code>' + lines[i].replace(/</gm, '&lt;') + '</code>\n';
+    result = result + '<code>' + lines[i] + '</code>\n';
   }
   result = result + '</pre>\n';
   result = result.replace(/<code><\/code>/g, '<code>&nbsp;</code>');
