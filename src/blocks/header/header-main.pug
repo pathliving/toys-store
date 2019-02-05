@@ -1,0 +1,22 @@
+include ../mixins/mixins.pug
+
+.header__main
+	.container
+		.header__content
+			.header__logo.logo
+				img(src="img/logo.svg" alt="Логотип").logo__img
+			.header__phones
+				.header__item
+					a(href="tel:8439120330003").header__phone 8 (495) 145-30-30
+					a(href="").header__link Заказать звонок
+				.header__item
+					a(href="tel:8439120330003").header__phone 8 (495) 145-14-14
+					span.header__description Звонок бесплатный
+			.header__shop
+				.header-goods
+					span.header-goods__price 0 &#8381;
+					span.header-goods__count 0 товаров
+				.header-basket
+					svg(class="header-basket__icon")
+						use(xlink:href="img/sprite.svg#basket")
+					span.header-basket__text Корзина
