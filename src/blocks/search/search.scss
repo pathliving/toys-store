@@ -1,0 +1,7 @@
+.search {
+  &__icon {
+    @include size(20px);
+    cursor: pointer;
+    fill: $blaze-orange;
+  }
+}
