@@ -1,0 +1,15 @@
+.header-nav {
+  &__list {
+    align-items: center;
+    display: flex;
+  }
+  &__item {
+    margin-right: 30px;
+    &:last-child { margin-right: 0; }
+  }
+  &__link {
+    color: $tundora;
+    font-size: 12px;
+    line-height: 1.67;
+  }
+}
