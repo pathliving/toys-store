@@ -308,9 +308,9 @@ function buildJs() {
           }
         ]
       },
-      // externals: {
-      //   jquery: 'jQuery'
-      // }
+      externals: {
+        jquery: 'jQuery'
+      }
     }))
     .pipe(dest(`${dir.build}js`));
 }
