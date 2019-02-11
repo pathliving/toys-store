@@ -1,0 +1,122 @@
+@import "src/blocks/buttons/buttons";
+
+.banner {
+	background-image: linear-gradient(255deg, #ffb800, #ff6d00);
+	border-radius: 4px;
+	height: 300px;
+	padding: 0 90px;
+	position: relative;
+	&__item {
+		outline: none;
+	}
+	&__navigation {
+		@include size(50px);
+		align-items: center;
+		background-color: rgba($white, .2);
+		border-radius: 50%;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		margin-top: -25px;
+		position: absolute;
+		top: 50%;
+		transition: all linear 0.3s;
+		&.banner__navigation {
+			&--prev {
+				left: 30px;
+			}
+			&--next {
+				right: 30px;
+			}
+		}
+		&:hover {
+			background-color: rgba($white, .5);
+			.banner__navigation-icon {
+				fill: rgba($black, .8);
+			}
+		}
+		&-icon {
+			fill: rgba($black, .5);
+			height: 17px;
+			transition: all linear 0.3s;
+			width: 10px;
+		}
+	}
+	&__content {
+		display: flex;
+		padding: 20px 0;
+	}
+	&__body {
+		color: $white;
+		flex: 1;
+		margin-left: 60px;
+		margin-top: 10px;
+	}
+	&__title {
+		display: block;
+		font-family: "VAGRounded", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+		font-size: ($base-font-size * 3) + 2px;
+		font-weight: 700;
+		line-height: 1;
+		margin-bottom: 15px;
+		margin-top: 30px;
+	}
+	&__descr {
+		display: block;
+		font-family: "VAGRounded", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+		font-size: $base-font-size + 2px;
+		font-weight: 400;
+		line-height: 1.67;
+		margin-bottom: 40px;
+	}
+	&__img {
+		max-width: 100%;
+		&--first {
+			padding-left: 58px;
+		}
+		&--second {
+			padding-left: 40px;
+		}
+		&--third {
+			padding-left: 58px;		
+		}
+		&-wrapper {      
+			flex: 0 0 40%;
+			text-align: center;
+			width: 40%;
+		}
+	}
+	&__dot {
+		@include size(8px);
+		border-radius: 50%;
+		background-color: rgba(38, 38, 38, 0.3);
+		cursor: pointer;
+		display: block;
+	}
+	&__dots {
+		bottom: 20px;
+		left: 50%;
+		position: absolute;
+		transform: translateX(-50%);
+		z-index: 2;
+		.slick-dots {
+			align-items: center;
+			display: flex;
+			li {
+				margin-right: 10px;
+				&:last-child {
+					margin-right: 0;
+				}
+				&.slick-active {
+					.banner__dot {
+						background-color: $white;
+					}
+				}
+			}
+		}
+	}
+}
+.s-banner {
+	padding: 30px 0;
+	position: relative;
+}
