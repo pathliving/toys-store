@@ -1,0 +1,32 @@
+.btn {
+	background-color: $white;
+	border: 1px solid $blaze-orange;
+	border-radius: 2px;
+	color: $blaze-orange;
+	display: block;
+	font-weight: 600;
+	line-height: 38px;
+	height: 40px;
+	text-align: center;
+	padding: 0 20px;
+	transition: all linear .3s;
+	&.btn {
+		&--transparent {
+			&-white{
+				background-color: transparent;
+				border-color: $white;
+				color: $white;
+				&:hover {
+					background-color: $white;
+					color: $blaze-orange;
+				}
+			}
+		}
+		&--round {
+			border-radius: 20px;
+		}
+		&--inline {
+			display: inline-block;
+		}
+	}
+}
