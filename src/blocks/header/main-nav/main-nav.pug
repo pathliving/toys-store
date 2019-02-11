@@ -5,17 +5,24 @@ nav.header__main-nav.main-nav
 						include main-nav-dropdown-1
 					li.main-nav__item
 						a(href="").main-nav__link Беговелы
-					li.main-nav__item
-						a(href="").main-nav__link Велосипеды
-					li.main-nav__item
-						a(href="").main-nav__link Ролики
-					li.main-nav__item
-						a(href="").main-nav__link Скейты
-					li.main-nav__item
-						a(href="").main-nav__link Батуты
 						include main-nav-dropdown-2
 					li.main-nav__item
-						a(href="").main-nav__link Аксессуары и запчасти
+						a(href="").main-nav__link Велосипеды
+						include main-nav-dropdown-2
 					li.main-nav__item
+						a(href="").main-nav__link Ролики
+						include main-nav-dropdown-1
+					li.main-nav__item
+						a(href="").main-nav__link Скейты
+						include main-nav-dropdown-2
+					li.main-nav__item
+						a(href="").main-nav__link Батуты
+						include main-nav-dropdown-1
+					li.main-nav__item
+						a(href="").main-nav__link Аксессуары и запчасти
+						include main-nav-dropdown-1
+					li.main-nav__item.main-nav__item-more
 						a(href="").main-nav__link Еще
-						include main-nav-dropdown-3
+						.main-nav__img-wrapper
+							img(class="main-nav__icon" src="img/chevron-down.svg" alt="Стрелка вниз")
+						include main-nav-dropdown-8

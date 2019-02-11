@@ -1,7 +1,5 @@
-@import "src/blocks/navigation/header-nav";
-@import "src/blocks/small-blocks/small-blocks";
-@import "src/blocks/mixins/mixins";
 @import "src/blocks/navigation/navigation";
+@import "src/blocks/search/search";
 
 .header {
 	border-bottom: 1px solid $athens-gray;
@@ -67,7 +65,6 @@
 	}
 	&__logo {
 		margin-right: 40px;
-		cursor: pointer;
 	}
 	&-goods {
 		&__price {
@@ -92,6 +89,10 @@
 		display: flex;
 		height: 40px;
 		padding: 0 20px;
+		&:hover {
+			background-color: $alto;
+			transition: all linear 0.3s;
+		}
 		& > * {
 			margin-right: 15px;
 			&:last-child { margin-right: 0; }
@@ -102,7 +103,7 @@
 		}
 		&__text {
 			color: $tundora;
-			font-weight: 400;
+			font-weight: 500;
 		}
 	}
 }

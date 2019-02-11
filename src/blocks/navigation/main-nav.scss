@@ -6,6 +6,10 @@
 	}
 	&__item {
 		margin-right: 40px;
+		position: relative;
+		&-more {
+			width: 55px;
+		}
 		&:last-child { margin-right: 0; }
 		&:hover {
 			.main-nav {
@@ -35,26 +39,33 @@
 		left: 0;
 		padding-top: 10px;
 		top: 100%;
-		width: 720px;
 		&-wrapper {
 			display: none;
 			left: 0;		
 			position: absolute;
 			top: 100%;
 			width: 100%;
+			z-index: 5;
 		}
 	}
 	&__icon {		
 		@include size(12px);
-		fill: $tundora;
-		margin-left: 10px;
+	}
+	&__img-wrapper {
+		cursor: pointer;
+		margin-left: 42px;
+		margin-top: -42px;
+		position: absolute;
 	}
 }
 .main-subnav {
 	&__list {
 		position: relative;
 		.main-subnav__list {
+			background-color: $white;
+			box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.05);
 			display: none;
+			height: 100%;
 			left: 360px;
 			position: absolute;
 			top: 0;
@@ -62,6 +73,10 @@
 	}
 	&__item {
 		width: 360px;
+		background-color: $white;
+		&--shadow {
+			box-shadow: 5px 5px 10px -3px rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+		}
 		&:hover {
 			& > .main-subnav__link {
 				background-color: $athens-gray;
