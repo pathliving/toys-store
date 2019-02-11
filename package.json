@@ -86,6 +86,7 @@
     "closest": "0.0.1",
     "jquery": "^3.1.1",
     "object-fit-images": "^3.2.3",
+    "slick-carousel": "^1.8.1",
     "svg4everybody": "^2.1.8"
   },
   "husky": {
