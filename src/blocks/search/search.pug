@@ -1,0 +1,18 @@
+mixin search()
+
+	svg(class="search__icon")
+		use(xlink:href="img/sprite.svg#search")
+
+
+
+mixin search-form()
+
+	.search__body.search__body--hidden
+		form.search__form
+			.search__input-wrapper
+				input(placeholder="Я хочу купить...").search__input
+				.search__clear
+					svg(class="search__clear-icon")
+						use(xlink:href="img/sprite.svg#close")
+			button(type="button" value="Найти").search__btn Найти
+			

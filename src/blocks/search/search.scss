@@ -1,6 +1,10 @@
+@import "src/blocks/search/search-form";
+
 .search {
+  position: relative;
   &__icon {
-    @include size(20px);
+    width: 20px;
+    height: 21px;
     cursor: pointer;
     fill: $blaze-orange;
   }
