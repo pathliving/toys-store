@@ -35,6 +35,7 @@ let config = {
     "src/fonts/VAGRounded-Lt-Bold.ttf": "fonts/",
     "src/img/*.{png,svg,jpg,jpeg}": "img/",
     "node_modules/slick-carousel/slick/slick.min.js" : "js/",
+    "node_modules/slick-carousel/slick/slick.css" : "css/",
     "node_modules/jquery/dist/jquery.min.js" : "js/"
     // "src/img/DSC_*": "img/",
     // "src/favicon/*.{png,ico,svg,xml,webmanifest}": "img/favicon",
