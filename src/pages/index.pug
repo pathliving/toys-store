@@ -1,22 +1,26 @@
 extends ../pug/layout.pug
 
-block meta
-  title Главная
-  meta(name='description', content='')
+include ../blocks/banner/banner
+include ../blocks/advantages/advantages
 
-//- block append head
-//-   link(rel='stylesheet', href='css/some.css')
+block meta
+	title Главная
+	meta(name='description', content='')
+
+block append head
+	link(rel='stylesheet', href='css/slick.css')
 
 block header
-  +header()
+	+header()
 
 block content
-  +banner()
+	+banner()
+	+advantages()
 
 block footer
 
 block page-bottom
-  //- script(src='js/script.js')
-  script(src='js/jquery.min.js')
-  script(src='js/slick.min.js')
-  script(src='js/bundle.js')
+	//- script(src='js/script.js')
+	script(src='js/jquery.min.js')
+	script(src='js/slick.min.js')
+	script(src='js/bundle.js')

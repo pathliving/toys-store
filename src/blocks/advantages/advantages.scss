@@ -1,0 +1,32 @@
+.advantages {
+  align-items: center;
+  background-color: $parcelain;
+  border-radius: 4px;
+  display: flex;
+  padding: 20px;
+}
+.advantage {
+  align-items: center;
+  display: flex;
+  margin-right: 190px;
+  &:last-child {
+    margin-right: 0;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+  &__icon {
+    @include size(40px);
+    fill: $dusty-gray;
+    margin-right: 20px;
+  }
+  &__title {
+    font-size: $base-font-size + 2px;
+    margin-bottom: 5px;
+  }
+  &__descr {
+    color: $mid-gray;
+    font-size: $base-font-size - 4px;
+  }
+}
