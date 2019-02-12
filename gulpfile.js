@@ -55,7 +55,7 @@ let pugOption = {
 let prettyOption = {
   indent_size: 2,
   indent_char: ' ',
-  unformatted: ['code', 'em', 'strong', 'span', 'i', 'b', 'br'],
+  unformatted: ['code', 'em', 'strong', 'span', 'i', 'b', 'br', 'script'],
   content_unformatted: [],
 };
 
@@ -156,6 +156,9 @@ function copyImg(cb) {
       await cpy(copiedImages, `${dir.build}img`);
       cb();
     })();
+  }
+  else {
+    cb();
   }
 }
 exports.copyImg = copyImg;
@@ -504,7 +507,7 @@ function filterShowCode(text, options) {
   var result = '<pre class="code">\n';
   if (typeof(options['first-line']) !== 'undefined') result = result + '<code>' + options['first-line'] + '</code>\n';
   for (var i = 0; i < (lines.length - 1); i++) { // (lines.length - 1) для срезания последней строки (пустая)
-    result = result + '<code>' + lines[i] + '</code>\n';
+    result = result + '<code>' + lines[i].replace(/</gm, '&lt;') + '</code>\n';
   }
   result = result + '</pre>\n';
   result = result.replace(/<code><\/code>/g, '<code>&nbsp;</code>');

@@ -1,5 +1,4 @@
 //- Шаблон страницы с боковым меню (off-canvas)
-
 include mixins.pug
 
 doctype html
@@ -32,12 +31,12 @@ html(class='no-js  page', lang='ru')
       link(rel='stylesheet', href='css/style.css')
       link(rel='stylesheet', href='css/blocks-library.css')
       script.
-        document.querySelector('html').classList.replace('no-js', 'js');'ontouchstart' in window ? document.querySelector('html').classList.add('touch') : document.querySelector('html').classList.add('no-touch');
+        document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
 
   body
-    //- noscript У вас отключен JavaScript. Это пугает.
+    noscript У вас отключен JavaScript. Это пугает.
 
-    //- .off-canvas#off-canvas
+    .off-canvas#off-canvas
       aside.off-canvas__aside(role='complementary', aria-label='Меню')
         block off-canvas
       main.off-canvas__page-content.components-demo.blocks-library(role='main')
@@ -55,5 +54,5 @@ html(class='no-js  page', lang='ru')
 
       .off-canvas__overlay(data-toggle='off-canvas')
 
-    //- block page-bottom
+    block page-bottom
       script(src='js/blocks-library.js')
