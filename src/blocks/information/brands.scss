@@ -1,0 +1,35 @@
+.brands__list {
+  display: flex;
+  flex-wrap: wrap;
+  & > * {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    &:nth-child(6n + 6) {
+      margin-right: 0;
+    }
+  }
+  &.brands__list--small {
+    & > * {
+      :nth-child(3n + 3) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.brand {
+  align-items: center;
+  color: $mine-shaft;
+  display: flex;
+  flex-direction: column;
+  &__img {
+    margin-bottom: 10px;
+    transition: all linear 0.3s;
+    &:hover {
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+    }
+  }
+  &__name {
+    margin-bottom: 35px;
+  }
+}

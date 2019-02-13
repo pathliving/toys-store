@@ -1,0 +1,47 @@
+mixin information()
+
+	section.s-information.light-bg
+		.container
+			.information
+				.information-item
+					.information-item__header
+						h2.title-section Новости
+						.information-item__body
+							.news-prev__wrapper
+								a(href="").news-prev
+									.news-prev__img(style="background-image:url('img/news-1.jpg')")
+									.news-prev__body
+										span.news-prev__title Выставка в Германии
+										span.news-prev__date 13 июля 2018
+								a(href="").news-prev
+									.news-prev__img(style="background-image:url('img/news-2.jpg')")
+									.news-prev__body
+										span.news-prev__title С наступающим Новым годом!
+										span.news-prev__date 25 декабря 2018
+						.information-item__footer
+						a(href="").information-item__link Все новости
+
+				.information__item
+					.information-item__header
+						h2.title-section Отзывы
+					.information-item__body
+						.review-prev
+							p.review-prev__text Заказали на вашем сайте в начале мая двухколесный велосипед Puky для дочки. Очень довольны покупкой! Ребенок катается на нем с большим удовольствием! Сам по себе велосипед замечательный и посадка у него низкая и ход педалей мягкий. Порадовала быстрая доставка, курьер привез велосипед в день заказа.
+							p.review-prev__author Антон
+					.information-item__footer
+						a(href="").information-item__link Все отзывы
+
+				.information__item
+					.information-item__header
+						h2.title-section Бренды
+					.information-item__body
+						.brands__wrapper
+							ul.brands__list
+								each brand in [{img: 'puky', name: 'PUKY'}, {img: 'hudora', name: 'HUDORA'}, {img: 'globber', name: 'GLOBBER'}, {img: 'kokua', name: 'KOKUA'}, {img: 'micro', name: 'MICRO'}, {img: 'stiga', name: 'STIGA'}]
+									li.brands__item
+										a(href="").brand
+											img(src=`img/${brand.img}.jpg`).brand__img
+											span.brand__name=brand.name
+					.information-item__footer
+						a(href="").information-item__link Все бренды
+						span.information-item__count (9)
