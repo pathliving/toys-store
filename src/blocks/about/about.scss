@@ -1,0 +1,39 @@
+.s-about {
+	padding: 30px 0 40px 0;
+}
+
+.about {
+	display: flex;
+	& > * {
+		margin-right: 30px;
+		&:last-child { margin-right: 0; }
+	}
+	&__body {
+		flex: 1;
+		.tab {
+			& > * {
+				margin: 15px 0;
+				&:first-child { margin-top: 0; }
+				&:last-child { margin-bottom: 0; }
+			}
+		}
+	}
+	&-navigation {
+		flex: 0 0 255px;
+		width: 255px;
+		&__item {
+			border-bottom: 2px solid $alto;
+			line-height: 48px;
+			height: 50px;
+			padding-left: 10px;
+			&:last-child { margin-right: 0; }
+			&.tabs-navigation__item--active {
+				border-bottom-color: $blaze-orange;
+			}
+		}
+	}
+}
+
+.text {
+	line-height: 1.79;
+}
