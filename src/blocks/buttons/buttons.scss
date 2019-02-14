@@ -5,12 +5,18 @@
 	color: $blaze-orange;
 	cursor: pointer;
 	display: block;
+	font-size: $base-font-size - 3px;
 	font-weight: 600;
 	line-height: 38px;
 	height: 40px;
 	text-align: center;
 	padding: 0 20px;
 	transition: all linear .3s;
+	width: 100%;
+	&:hover {
+		background-color: $blaze-orange;
+		color: $white;
+	}
 	&.btn {
 		&--transparent {
 			&-white{
@@ -22,12 +28,28 @@
 					color: $blaze-orange;
 				}
 			}
+			&-gray {
+				border-color: rgba(38, 38, 38, 0.15);
+				background-color: transparent;
+				color: $oslo-gray;
+				font-weight: 400;
+				&:hover {
+					background-color: rgba(38, 38, 38, 0.15);
+					color: $tundora;
+				}
+			}
 		}
 		&--round {
 			border-radius: 20px;
 		}
 		&--inline {
 			display: inline-block;
+			width: auto;
+		}
+		&--small {
+			height: 30px;
+			line-height: 28px;
+			padding: 0 15px;
 		}
 	}
 }
