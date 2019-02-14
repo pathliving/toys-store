@@ -1,0 +1,63 @@
+mixin footerNavLink(link,text)
+	li.footer-nav__item
+		a(href=link).footer-nav__link=text
+
+mixin footer()
+
+	footer.footer
+		.footer__main
+			.container
+				.footer__navigation
+					.footer__item
+						ul.footer-nav
+							+footerNavLink('','Самокаты')
+							+footerNavLink('','Беговелы')
+							+footerNavLink('','Велосипеды')
+							+footerNavLink('','Роликовые коньки')
+							+footerNavLink('','Скейты')
+							+footerNavLink('','Батуты')
+							+footerNavLink('','Детский спорт и отдых')
+							+footerNavLink('','Аксессуары и запчасти')
+					.footer__item
+						ul.footer-nav
+							+footerNavLink('','О компании')
+							+footerNavLink('','Доставка')
+							+footerNavLink('','Оплата')
+							+footerNavLink('','Поставщикам')
+							+footerNavLink('','Новости')
+							+footerNavLink('','Отзывы')
+					.footer__item
+						ul.footer-nav
+							+footerNavLink('','Контакты')
+							+footerNavLink('','Вопросы и ответы')
+							+footerNavLink('','Карта сайта')
+
+						span.footer__adress Киев, проспект Мира, д.44, офис 714
+				.footer__contacs
+					.footer__phones
+						a(href="tel:0441453030").footer__phone (044) 145-30-30
+						span.footer__text Звонок бесплатный
+						span.footer__text (044) 145-14-14
+					a(href="mailto:sale@baby-toys.com").footer__mail sale@baby-toys.com
+		.footer__socials
+			.container
+				ul.socials
+					li.socials__item
+						a(href="https://instagram.com").socials__link
+							img(src="img/instagram-logo.png" alt="instagram")
+							span.socials__name Instagram
+					li.socials__item
+						a(href="https://facebook.com").socials__link
+							img(src="img/facebook-logo.png" alt="facebook")
+							span.socials__name Facebook					
+					li.socials__item
+						a(href="https://twitter.com").socials__link
+							img(src="img/twitter-logo.png" alt="twitter")
+							span.socials__name Twitter
+				.facebook
+					img(src="img/facebook.png" alt="facebook")
+					a(href="https://facebook.com").btn.btn--small.btn--transparent-gray.btn--inline.btn--facebook Оставить отзыв
+		.footer__bottom
+			.container
+				span.copyright @ 2010-<script>document.write(new Date().getFullYear());</script> "Baby-Toys". Все права защищены. Информация сайта защищена законом об авторских правах
+				a(href="").footer__personal-data Политика обработки персональных данных
