@@ -1,15 +1,18 @@
-.s-about {
-	padding: 30px 0 40px 0;
-}
-
 .about {
 	display: flex;
+	@media screen and (max-width: $tablet-size) {
+		flex-direction: column;
+	}
 	& > * {
 		margin-right: 30px;
 		&:last-child { margin-right: 0; }
 	}
 	&__body {
 		flex: 1;
+		min-height: 240px;
+		@media screen and (max-width: $tablet-size) {
+			order: 2;
+		}
 		.tab {
 			& > * {
 				margin: 15px 0;
@@ -21,12 +24,29 @@
 	&-navigation {
 		flex: 0 0 255px;
 		width: 255px;
+		@media screen and (max-width: $tablet-size) {
+			text-align: center;
+			display: flex;
+			order: 1;
+			flex: 1;
+			margin-bottom: 30px;
+			width: 100%;
+		}
 		&__item {
 			border-bottom: 2px solid $alto;
 			line-height: 48px;
 			height: 50px;
 			padding-left: 10px;
-			&:last-child { margin-right: 0; }
+			@media screen and (max-width: $tablet-size) {
+				flex: 1;
+				margin-right: 30px;
+				padding-left: 0;
+			}
+			&:last-child {
+				@media screen and (max-width: $tablet-size) {
+					margin-right: 30px;
+				}
+			}
 			&.tabs-navigation__item--active {
 				border-bottom-color: $blaze-orange;
 			}
@@ -36,4 +56,12 @@
 
 .text {
 	line-height: 1.79;
+}
+
+.s-about {
+	padding: 30px 0 40px 0;
+	font-size: $base-font-size - 2px;
+	@media screen and (max-width: $tablet-size) {
+		padding: 30px 0 0 0;
+	}
 }

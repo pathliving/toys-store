@@ -7,9 +7,15 @@
 	background-color: $athens-gray;
 	&__main {
 		padding: 40px 0;
+		@media screen and (max-width: $tablet-size) {
+			padding: 40px 0 0 0;
+		}
 		.container {
 			align-items: flex-start;
 			display: flex;
+			@media screen and (max-width: $tablet-size) {
+				flex-wrap: wrap;
+			}
 		}
 	}
 	&__item {
@@ -17,6 +23,11 @@
 		flex-direction: column;
 		margin-right: 130px;
 		max-width: 215px;
+		@media screen and (max-width: $tablet-size) {
+			flex: 0 0 226px;
+			margin-right: 0;
+			width: 226px;
+		}
 		&:last-child { margin-right: 0; }
 		& > * {
 			margin: 15px 0;
@@ -26,6 +37,14 @@
 	}
 	&__socials {
 		padding: 30px 0;
+		@media screen and (max-width: $tablet-size) {
+			padding: 0 0 30px 0;
+		}
+		.facebook {
+			@media screen and (max-width: $tablet-size) {
+				display: none;
+			}
+		}
 		.container {
 			align-items: center;
 			display: flex;
@@ -35,17 +54,39 @@
 		background-color: rgba(0, 0, 0, 0.05);
 		padding: 20px 0;
 		.container {
-		align-items: center;
-		display: flex;
-		justify-content: space-between;
+			align-items: flex-start;
+			display: flex;
+			justify-content: space-between;
+			@media screen and (max-width: $tablet-size) {
+				font-size: $base-font-size - 4px;
+				line-height: 1.67;
+			}
+			& > * {
+				flex: 0 0 45%;
+				width: 45%;
+			}
 		}
 	}
 	&__personal-data {
 		color: $oslo-gray;
+		text-align: right;
+		margin: auto;
+		margin-right: 0;
 	}
 	&__contacs {
 		margin-left: auto;
 		text-align: right;
+		@media screen and (max-width: $tablet-size) {
+			display: none;
+		}
+		&-mobile {
+			display: none;
+			justify-content: space-between;
+			width: 100%;
+			@media screen and (max-width: $tablet-size) {
+				display: flex;
+			}
+		}
 	}
 	&__phones {
 		display: flex;
@@ -64,13 +105,27 @@
 	}
 	&__mail {
 		color: $mine-shaft;
+		@media screen and (max-width: $tablet-size) {
+			margin-top: 18px;
+		}
 	}
 	&__adress {
 		line-height: 1.79;
 	}
-	&__navigation {
+	&__navigation {		
+		align-items: flex-start;
 		display: flex;
-		align-items: flex-start; 
+		margin-bottom: 30px;
+		@media screen and (max-width: $tablet-size) {
+			flex: 1;
+			justify-content: space-between;
+			width: 100%;
+		}
+	}
+	&__text {
+		&-phone {
+			font-size: $base-font-size;
+		}
 	}
 	&-nav {
 		&__item {
@@ -89,9 +144,18 @@
 .socials {
 	align-items: center;
 	display: flex;
+	@media screen and (max-width: $tablet-size) {
+		width: 100%;
+		justify-content: space-between;
+	}
 	&__item {
 		margin-right: 50px;
 		&:last-child { margin-right: 0;	}
+		@media screen and (max-width: $tablet-size) {
+			flex: 0 0 216px;
+			margin-right: 0;
+			width: 216px;
+		}
 	}
 	&__link {
 		align-items: center;
@@ -109,8 +173,17 @@
 	align-items: center;
 	display: flex;
 	margin-left: auto;
+	@media screen and (max-width: $tablet-size) {
+		align-items: flex-start;
+		margin-left: 0;
+		flex-direction: column;
+	}
 	& > * {
 		margin-right: 20px;
+		@media screen and (max-width: $tablet-size) {
+			margin-right: 0;
+			margin-bottom: 10px;
+		}
 		&:last-child { margin-right: 0; }
 	}
 }

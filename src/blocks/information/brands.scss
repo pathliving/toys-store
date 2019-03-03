@@ -1,6 +1,8 @@
 .brands__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
   & > * {
     margin-right: 10px;
     margin-bottom: 10px;
@@ -8,14 +10,9 @@
       margin-right: 0;
     }
   }
-  &.brands__list--small {
-    & > * {
-      :nth-child(3n + 3) {
-        margin-right: 0;
-      }
-    }
-  }
 }
+
+
 
 .brand {
   align-items: center;

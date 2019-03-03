@@ -59,6 +59,13 @@
     right: 0;
     top: -35px;
     width: 550px;
+    @media screen and (max-width: $tablet-size) {
+      box-shadow: none;
+      display: block;
+      padding: 0;
+      position: static;  
+      width: 100%;    
+    }
     &--hidden {
       display: none;
     }

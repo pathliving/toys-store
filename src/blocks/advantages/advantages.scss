@@ -1,36 +1,49 @@
 .s-advantages {
-  padding: 0 0 30px 0;
+	padding: 0 0 30px 0;
 }
 
 .advantages {
-  align-items: center;
-  background-color: $parcelain;
-  border-radius: 4px;
-  display: flex;
-  padding: 20px;
+	align-items: center;
+	background-color: $parcelain;
+	border-radius: 4px;
+	display: flex;
+	padding: 20px;
+	@media screen and (max-width: $tablet-size) {
+		justify-content: space-between;
+		padding: 20px 40px;
+	}
 }
 .advantage {
-  align-items: center;
-  display: flex;
-  margin-right: 190px;
-  &:last-child {
-    margin-right: 0;
-  }
-  &__body {
-    display: flex;
-    flex-direction: column;
-  }
-  &__icon {
-    @include size(40px);
-    fill: $dusty-gray;
-    margin-right: 20px;
-  }
-  &__title {
-    font-size: $base-font-size + 2px;
-    margin-bottom: 5px;
-  }
-  &__descr {
-    color: $mid-gray;
-    font-size: $base-font-size - 4px;
-  }
+	align-items: center;
+	display: flex;
+	margin-right: 190px;
+	@media screen and (max-width: $tablet-size) {
+		flex-direction: column;
+		margin-right: 0;
+		text-align: center;
+	}
+	&:last-child {
+		margin-right: 0;
+	}
+	&__body {
+		display: flex;
+		flex-direction: column;
+	}
+	&__icon {
+		@include size(40px);
+		fill: $dusty-gray;
+		margin-right: 20px;
+		@media screen and (max-width: $tablet-size) {
+			margin-right: 0;
+			margin-bottom: 10px;
+		}
+	}
+	&__title {
+		font-size: $base-font-size + 2px;
+		margin-bottom: 5px;
+	}
+	&__descr {
+		color: $mid-gray;
+		font-size: $base-font-size - 4px;
+	}
 }

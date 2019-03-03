@@ -1,6 +1,6 @@
-@import "src/blocks/information/news.scss";
-@import "src/blocks/information/review.scss";
-@import "src/blocks/information/brands.scss";
+@import "src/blocks/information/news";
+@import "src/blocks/information/review";
+@import "src/blocks/information/brands";
 
 .light-bg {
 	background-color: $parcelain;
@@ -12,9 +12,16 @@
 
 .information {
 	display: flex;
+	@media screen and (max-width: $tablet-size) {
+		flex-wrap: wrap;
+	}
 	& > * {
 		flex: 1;
 		padding-right: 30px;
+		@media screen and (max-width: $tablet-size) {
+			flex: 0 0 50%;
+			width: 50%;
+		}
 		&:last-child { padding-right: 0; }
 	}
 	&-item {
@@ -35,6 +42,20 @@
 			& > * {
 				margin-right: 5px;
 				&:last-child { margin-right: 0; }
+			}
+		}
+		&.information-item--wide {
+			@media screen and (max-width: $tablet-size) {
+				flex: 1;
+				margin-top: 40px;
+				width: 100%;
+			}
+			.information-item {
+				&__body {
+					@media screen and (max-width: $tablet-size) {
+						height: 110px;
+					}
+				}
 			}
 		}
 	}

@@ -56,6 +56,10 @@
 		flex: 1;
 		margin-left: 60px;
 		margin-top: 10px;
+		@media screen and (max-width: $tablet-size) {
+			margin: auto;
+			margin-left: 50px;
+		}
 	}
 	&__title {
 		display: block;
@@ -65,6 +69,9 @@
 		line-height: 1;
 		margin-bottom: 15px;
 		margin-top: 30px;
+		@media screen and (max-width: $tablet-size) {
+			margin-top: 0;
+		}
 	}
 	&__descr {
 		display: block;
@@ -73,17 +80,37 @@
 		font-weight: 400;
 		line-height: 1.67;
 		margin-bottom: 40px;
+		@media screen and (max-width: $tablet-size) {
+			margin-bottom: 35px;
+			margin-top: 20px;
+			font-size: $base-font-size - 1px;
+		}
 	}
 	&__img {
 		max-width: 100%;
+		@media screen and (max-width: $tablet-size) {
+			max-width: 80%;
+		}
+		&-wrapper {
+			margin: auto;
+		}
 		&--first {
 			padding-left: 58px;
+			@media screen and (max-width: $tablet-size) {
+				padding-left: 58px;
+			}
 		}
 		&--second {
 			padding-left: 40px;
+			@media screen and (max-width: $tablet-size) {
+				margin-top: 5px;
+			}
 		}
 		&--third {
-			padding-left: 58px;		
+			padding-left: 58px;
+			@media screen and (max-width: $tablet-size) {
+				padding-left: 58px;
+			}	
 		}
 		&-wrapper {      
 			flex: 0 0 40%;
@@ -92,7 +119,7 @@
 		}
 	}
 	&__dot {
-		@include size(8px);
+		@include size(10px);
 		border-radius: 50%;
 		background-color: rgba(38, 38, 38, 0.3);
 		cursor: pointer;

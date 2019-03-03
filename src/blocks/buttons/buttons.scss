@@ -50,6 +50,9 @@
 			height: 30px;
 			line-height: 28px;
 			padding: 0 15px;
+			@media screen and (max-width: $tablet-size) {
+				padding: 0 10px;
+			}
 		}
 	}
 }

@@ -1,8 +1,13 @@
 @import "src/blocks/navigation/navigation";
 @import "src/blocks/search/search";
+@import "src/blocks/header/mobile";
+@import "src/blocks/header/mobile-nav";
 
 .header {
 	border-bottom: 1px solid $athens-gray;
+	@media screen and (max-width: $tablet-size) {
+		border-bottom: 0;
+	}
 	&__nav {
 		&.header__nav {
 			&--right {
@@ -12,7 +17,10 @@
 	}
 	&__top {
 		background-color: $athens-gray;
-		padding: 10px 0;		
+		padding: 10px 0;
+		@media screen and (max-width: $tablet-size) {
+			display: none;
+		}	
 	}
 	&__content {
 		align-items: center;
@@ -51,6 +59,23 @@
 	}
 	&__search {
 		margin-left: auto;
+	}
+	&__menu {
+		@media screen and (max-width: $tablet-size) {
+			display: none;
+		}
+	}
+	&__item {
+		@media screen and (max-width: $tablet-size) {
+			display: none;
+		}
+		&.header__item {
+			&--mobile {
+				@media screen and (max-width: $tablet-size) {
+					display: block;
+				}
+			}
+		}
 	}
 	&__shop {
 		display: flex;
