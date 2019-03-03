@@ -1,0 +1,21 @@
+include ../../products/prev-1
+include ../../products/prev-2
+include ../../products/prev-3
+include ../../products/prev-4
+
+mixin sales()
+
+	.products-line-slider
+		.js-products-line-slider
+			+prev-1()
+			+prev-2()
+			+prev-3()
+			+prev-4()
+		.products-line-slider__navigation
+			.products-line-slider__btn.products-line-slider__btn--prev
+				svg(class="products-line-slider__icon")
+					use(xlink:href="img/sprite.svg#chevron-left")
+			.products-line-slider__dots
+			.products-line-slider__btn.products-line-slider__btn--next
+				svg(class="products-line-slider__icon")
+					use(xlink:href="img/sprite.svg#chevron-right")

@@ -1,0 +1,29 @@
+.tab {
+  display: none;
+  outline: none;
+  &.tab {
+    &--active {
+      display: block;
+      animation: tab linear 0.7s forwards;
+    }
+  }
+}
+
+.tabs {
+  &-navigation {
+    &__item {
+      cursor: pointer;
+      transition: all linear 0.3s;
+      white-space: nowrap;
+    }
+  }
+}
+
+@keyframes tab {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
