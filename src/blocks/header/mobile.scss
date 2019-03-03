@@ -1,0 +1,17 @@
+.header {
+  &__mobile {
+		display: none;
+		position: relative;
+		.container {
+			display: flex;
+			justify-content: space-between;
+			& > * {
+				flex: 0 0 48%;
+				width: 48%;
+			}
+		}
+		@media screen and (max-width: $tablet-size) {
+			display: block;
+		}
+	}
+}

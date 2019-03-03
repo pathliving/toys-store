@@ -1,0 +1,15 @@
+include ../search/search
+
+.header__mobile
+	.container
+		.nav.mobile-nav
+			.mobile-nav__header
+				.mobile-nav__sandwich.sandwich
+					.sandwich__line.sandwich__line--top
+					.sandwich__line.sandwich__line--middle
+					.sandwich__line.sandwich__line--bottom
+				span.mobile-nav__title Каталог товаров
+			.mobile-nav__body
+				ul.mobile-nav__list
+		.search
+			+search-form()

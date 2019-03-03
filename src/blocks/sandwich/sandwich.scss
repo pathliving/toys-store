@@ -1,0 +1,31 @@
+.sandwich {
+	cursor: pointer;
+	height: 16px;
+	position: relative;
+	width: 20px;
+	&--active {
+		.sandwich__line {
+			&--top {
+				top: 7px;
+				transform: rotate(45deg);
+			}
+			&--middle { opacity: 0; }
+			&--bottom {
+				top: 7px;
+				transform: rotate(-45deg);
+			}
+		}
+	}
+	&__line {
+		background-color: $white;
+		display: block;
+		height: 2px;
+		left: 0;
+		position: absolute;
+		transition: all linear 0.4s;
+		width: 100%;
+		&--top { top: 0; }
+		&--middle { top: 7px; }
+		&--bottom { top: 14px; }
+	}
+}
