@@ -6,7 +6,6 @@
 	}
 	&__item {
 		margin-right: 40px;
-		position: relative;
 		&-more {
 			width: 55px;
 		}
@@ -38,10 +37,8 @@
 		display: inline-flex;
 		left: 0;
 		padding-top: 10px;
-		top: 100%;
 		&-wrapper {
 			display: none;
-			left: 0;		
 			position: absolute;
 			top: 100%;
 			width: 100%;
@@ -50,57 +47,13 @@
 	}
 	&__icon {		
 		@include size(12px);
+		fill: $tundora;
+		margin-left: 10px;
 	}
 	&__img-wrapper {
 		cursor: pointer;
 		margin-left: 42px;
 		margin-top: -42px;
 		position: absolute;
-	}
-}
-.main-subnav {
-	&__list {
-		position: relative;
-		.main-subnav__list {
-			background-color: $white;
-			box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.05);
-			display: none;
-			height: 100%;
-			left: 360px;
-			position: absolute;
-			top: 0;
-		}
-	}
-	&__item {
-		width: 360px;
-		background-color: $white;
-		&--shadow {
-			box-shadow: 5px 5px 10px -3px rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.05);
-		}
-		&:hover {
-			& > .main-subnav__link {
-				background-color: $athens-gray;
-				color: $blaze-orange;
-			}
-			.main-subnav__icon {
-				fill: $blaze-orange;
-			}
-			.main-subnav__list {
-				display: block;
-			}
-		}
-	}
-	&__link {
-		align-items: center;
-		color: $mine-shaft;
-		display: flex;
-		line-height: 20px;
-		padding: 10px;
-	}
-	&__icon {
-		height: 18px;
-		fill: $silver;
-		margin-left: auto;
-		width: 10px;
 	}
 }

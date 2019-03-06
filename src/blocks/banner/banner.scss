@@ -49,16 +49,19 @@
 	}
 	&__content {
 		display: flex;
-		padding: 20px 0;
+		height: 300px;
+		vertical-align: middle;
 	}
 	&__body {
 		color: $white;
-		flex: 1;
-		margin-left: 60px;
-		margin-top: 10px;
+		// flex: 1;
+		flex: 0 0 60%;
+		margin: auto;
+		width: 60%;
 		@media screen and (max-width: $tablet-size) {
 			margin: auto;
-			margin-left: 50px;
+			flex: 0 0 40%;
+			width: 40%;
 		}
 	}
 	&__title {
@@ -68,9 +71,14 @@
 		font-weight: 700;
 		line-height: 1;
 		margin-bottom: 15px;
-		margin-top: 30px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 390px;
 		@media screen and (max-width: $tablet-size) {
 			margin-top: 0;
+			margin-left: auto;
+			margin-right: auto;
+			width: 370px;
 		}
 	}
 	&__descr {
@@ -80,42 +88,30 @@
 		font-weight: 400;
 		line-height: 1.67;
 		margin-bottom: 40px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 390px;	
 		@media screen and (max-width: $tablet-size) {
 			margin-bottom: 35px;
 			margin-top: 20px;
 			font-size: $base-font-size - 1px;
+			margin-left: auto;
+			margin-right: auto;
+			width: 370px;
 		}
 	}
 	&__img {
 		max-width: 100%;
-		@media screen and (max-width: $tablet-size) {
-			max-width: 80%;
-		}
+		margin: auto;
 		&-wrapper {
+			flex: 1;
 			margin: auto;
-		}
-		&--first {
-			padding-left: 58px;
-			@media screen and (max-width: $tablet-size) {
-				padding-left: 58px;
-			}
-		}
-		&--second {
-			padding-left: 40px;
-			@media screen and (max-width: $tablet-size) {
-				margin-top: 5px;
-			}
-		}
-		&--third {
-			padding-left: 58px;
-			@media screen and (max-width: $tablet-size) {
-				padding-left: 58px;
-			}	
-		}
-		&-wrapper {      
-			flex: 0 0 40%;
 			text-align: center;
-			width: 40%;
+			@media screen and (max-width: $tablet-size) {
+			flex: 0 0 30%;
+			text-align: center;
+			width: 30%;
+			}
 		}
 	}
 	&__dot {
@@ -147,7 +143,14 @@
 			}
 		}
 	}
+	.btn {
+		margin-left: 85px;
+		@media screen and (max-width: $tablet-size) {
+			margin-left: 0;
+		}
+	}
 }
+
 .s-banner {
 	padding: 30px 0;
 	position: relative;

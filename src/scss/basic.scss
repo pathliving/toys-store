@@ -65,6 +65,7 @@ input, select, button {
 .container {
 	margin: 0 auto;
 	max-width: $content-size;
-	width: 100%;
 	padding: 0 15px;
+	position: relative;
+	width: 100%;
 }

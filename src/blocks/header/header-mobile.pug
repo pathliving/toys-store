@@ -1,15 +1,51 @@
 include ../search/search
 
+mixin mainSubnavLink(link,text)
+	li.catalog-nav__item
+		a(href=link).catalog-nav__link
+			span.catalog-nav__text=text
+			svg(class="catalog-nav__icon")
+					use(xlink:href="img/sprite.svg#chevron-right")
+
+mixin informNavLink(link,text)
+	li.inform-nav__item
+		a(href=link).inform-nav__link=text
+
 .header__mobile
 	.container
-		.nav.mobile-nav
-			.mobile-nav__header
-				.mobile-nav__sandwich.sandwich
+		.mobile-menu
+			.mobile-menu__toggle
+				.mobile-menu__sandwich.sandwich
 					.sandwich__line.sandwich__line--top
 					.sandwich__line.sandwich__line--middle
 					.sandwich__line.sandwich__line--bottom
-				span.mobile-nav__title Каталог товаров
-			.mobile-nav__body
-				ul.mobile-nav__list
+				span.mobile-menu__title Каталог товаров
+			.mobile-menu__content
+				.mobile-menu__header
+					span.mobile-menu__title Меню
+					.mobile-menu__close
+						svg(class="mobile-menu__close-icon")
+							use(xlink:href="img/sprite.svg#close")
+				.mobile-menu__body
+					nav.catalog-nav
+						ul.catalog-nav__list
+							each text in ['Самокаты', 'Беговелы', 'Велосипеды', 'Ролики', 'Скейты', 'Батуты', 'Аксессуары и запчасти', 'Зимний спорт', 'Настольные игры']
+								+mainSubnavLink('',text)
+					nav.inform-nav.inform-nav--col
+						ul.inform-nav__list
+							+informNavLink('','О компании')
+							+informNavLink('','Доставка и оплата')
+							+informNavLink('','Акции')
+							+informNavLink('','Оптовикам')
+							+informNavLink('','Новости')
+							+informNavLink('','Гарантии')
+							+informNavLink('','Контакты')
+					.mobile-menu__footer
+						.mobile-menu__phone
+							a(href="tel:0441453030").mobile-menu__phone-number (044) 145-30-30
+							a(href="").mobile-menu__phone-link Заказать звонок
+						.mobile-menu__phone
+							a(href="tel:0441453030").mobile-menu__phone-number (044) 145-14-14
+							span.mobile-menu__phone-text Звонок бесплатный
 		.search
 			+search-form()
