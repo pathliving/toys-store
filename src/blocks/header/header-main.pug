@@ -1,3 +1,5 @@
+include ../small-blocks/icon
+
 .header__main
 	.container
 		.header__content
@@ -15,6 +17,5 @@
 					span.header-goods__price 0 грн.
 					span.header-goods__count 0 товаров
 				.header-basket
-					svg(class="header-basket__icon")
-						use(xlink:href="img/sprite.svg#basket")
+					+icon('basket', 'header-basket__icon')
 					span.header-basket__text Корзина

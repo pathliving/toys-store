@@ -26,7 +26,7 @@ mixin footer()
 							+footerNavLink('','Поставщикам')
 							+footerNavLink('','Новости')
 							+footerNavLink('','Отзывы')
-					.footer__item
+					.footer__item.footer__item--wide
 						ul.footer-nav
 							+footerNavLink('','Контакты')
 							+footerNavLink('','Вопросы и ответы')
@@ -43,10 +43,10 @@ mixin footer()
 					.footer__item
 						a(href="tel:0441453030").footer__phone (044) 145-30-30
 						span.footer__text Звонок бесплатный
-					.footer__item
+					.footer__item.footer__item--text-right
 						span.footer__text.footer__text-phone (044) 145-14-14
 						a(href="mailto:sale@baby-toys.com").footer__mail sale@baby-toys.com
-					.footer__item
+					.footer__item.footer__item--full
 						.facebook
 							img(src="img/facebook.png" alt="facebook")
 							a(href="https://facebook.com").btn.btn--small.btn--transparent-gray.btn--inline.btn--facebook Оставить отзыв

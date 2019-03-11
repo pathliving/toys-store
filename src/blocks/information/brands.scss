@@ -3,6 +3,12 @@
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
+  @media screen and (max-width: $phone-size) {
+    justify-content: flex-start;
+    // flex-wrap: nowrap;
+    // overflow: auto;
+    // margin-right: -15px;
+  }
   & > * {
     margin-right: 10px;
     margin-bottom: 10px;
@@ -12,7 +18,11 @@
   }
 }
 
-
+// .brands {
+//   &__wrapper {
+//     margin-right: -15px;
+//   }
+// }
 
 .brand {
   align-items: center;

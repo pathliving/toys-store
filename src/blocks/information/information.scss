@@ -7,13 +7,16 @@
 }
 
 .s-information {
-	padding: 35px 0 50px 0;
+	padding: 0px 0 50px 0;
 }
 
 .information {
 	display: flex;
 	@media screen and (max-width: $tablet-size) {
 		flex-wrap: wrap;
+	}
+	@media screen and (max-width: $phone-size) {
+		flex-direction: column;
 	}
 	& > * {
 		flex: 1;
@@ -22,12 +25,29 @@
 			flex: 0 0 50%;
 			width: 50%;
 		}
+		@media screen and (max-width: $phone-size) {
+			flex: 1;
+			width: 100%;
+		}
 		&:last-child { padding-right: 0; }
 	}
 	&-item {
+		&__header {
+			margin-top: 30px;			
+		}
 		&__body {
 			height: 300px;
+			@media screen and (max-width: $phone-size) {
+				height: auto;
+				margin-bottom: 20px;
+				// margin-top: 40px;
+			}
 		}
+		// &:first-child {
+		// 	@media screen and (max-width: $phone-size) {
+		// 		margin-top: 0;
+		// 	}
+		// }
 		&__link {
 			color: $mine-shaft;
 			border-bottom: 1px solid rgba(38, 38, 38, 0.15);
@@ -47,13 +67,17 @@
 		&.information-item--wide {
 			@media screen and (max-width: $tablet-size) {
 				flex: 1;
-				margin-top: 40px;
+				// margin-top: 40px;
 				width: 100%;
 			}
 			.information-item {
 				&__body {
 					@media screen and (max-width: $tablet-size) {
 						height: 110px;
+					}
+					@media screen and (max-width: $phone-size) {
+						height: auto;
+						margin-bottom: 20px;
 					}
 				}
 			}

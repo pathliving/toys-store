@@ -1,14 +1,14 @@
+include ../small-blocks/icon
+
 mixin banner()
 
 	section.s-banner
 		.container
 			.banner
 				.banner__navigation.banner__navigation--prev
-					svg(class="banner__navigation-icon")
-						use(xlink:href="img/sprite.svg#chevron-left")
+					+icon('chevron-left', 'banner__navigation-icon')
 				.banner__navigation.banner__navigation--next
-					svg(class="banner__navigation-icon")
-						use(xlink:href="img/sprite.svg#chevron-right")
+					+icon('chevron-right', 'banner__navigation-icon')
 				.banner__dots
 				.js-banner
 					.banner__item

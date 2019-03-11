@@ -12,6 +12,12 @@
 		justify-content: space-between;
 		padding: 20px 40px;
 	}
+	@media screen and (max-width: $phone-size) {
+		align-items: flex-start;
+		flex-direction: column;
+		padding: 20px;
+		justify-content: flex-start;
+	}
 }
 .advantage {
 	align-items: center;
@@ -22,8 +28,16 @@
 		margin-right: 0;
 		text-align: center;
 	}
+	@media screen and (max-width: $phone-size) {
+		flex-direction: row;
+		text-align: left;
+		margin-bottom: 10px;
+	}
 	&:last-child {
 		margin-right: 0;
+		@media screen and (max-width: $phone-size) {
+			margin-bottom: 0;
+		}
 	}
 	&__body {
 		display: flex;
@@ -36,6 +50,10 @@
 		@media screen and (max-width: $tablet-size) {
 			margin-right: 0;
 			margin-bottom: 10px;
+		}
+		@media screen and (max-width: $phone-size) {
+			margin-right: 20px;
+			margin-bottom: 0;	
 		}
 	}
 	&__title {

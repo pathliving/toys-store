@@ -2,6 +2,7 @@ include ../../products/prev-1
 include ../../products/prev-2
 include ../../products/prev-3
 include ../../products/prev-4
+include ../../small-blocks/icon
 
 mixin benefits()
 
@@ -13,9 +14,7 @@ mixin benefits()
 			+prev-3()
 		.products-line-slider__navigation
 			.products-line-slider__btn.products-line-slider__btn--prev
-				svg(class="products-line-slider__icon")
-					use(xlink:href="img/sprite.svg#chevron-left")
+				+icon('chevron-left', 'products-line-slider__icon')
 			.products-line-slider__dots
 			.products-line-slider__btn.products-line-slider__btn--next
-				svg(class="products-line-slider__icon")
-					use(xlink:href="img/sprite.svg#chevron-right")
+				+icon('chevron-right', 'products-line-slider__icon')

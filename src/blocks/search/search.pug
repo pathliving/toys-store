@@ -1,7 +1,8 @@
+include ../small-blocks/icon
+
 mixin search()
 
-	svg(class="search__icon")
-		use(xlink:href="img/sprite.svg#search")
+	+icon('search', 'search__icon')
 
 
 
@@ -12,7 +13,6 @@ mixin search-form()
 			.search__input-wrapper
 				input(placeholder="Я хочу купить...").search__input
 				.search__clear
-					svg(class="search__clear-icon")
-						use(xlink:href="img/sprite.svg#close")
+					+icon('close', 'search__clear-icon')
 			button(type="button" value="Найти").search__btn Найти
 			

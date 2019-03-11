@@ -1,11 +1,11 @@
 include ../search/search
+include ../small-blocks/icon
 
 mixin mainSubnavLink(link,text)
 	li.catalog-nav__item
 		a(href=link).catalog-nav__link
 			span.catalog-nav__text=text
-			svg(class="catalog-nav__icon")
-					use(xlink:href="img/sprite.svg#chevron-right")
+			+icon('chevron-right', 'catalog-nav__icon')
 
 mixin informNavLink(link,text)
 	li.inform-nav__item
@@ -24,8 +24,7 @@ mixin informNavLink(link,text)
 				.mobile-menu__header
 					span.mobile-menu__title Меню
 					.mobile-menu__close
-						svg(class="mobile-menu__close-icon")
-							use(xlink:href="img/sprite.svg#close")
+						+icon('close', 'mobile-menu__close-icon')
 				.mobile-menu__body
 					nav.catalog-nav
 						ul.catalog-nav__list
@@ -47,5 +46,18 @@ mixin informNavLink(link,text)
 						.mobile-menu__phone
 							a(href="tel:0441453030").mobile-menu__phone-number (044) 145-14-14
 							span.mobile-menu__phone-text Звонок бесплатный
+		.mobile__logo
+			+logo('logo__img')
 		.search
 			+search-form()
+		nav.mobile-user-nav
+			ul.mobile-user-nav__list
+				li.mobile-user-nav__item
+					a(href="").mobile-user-nav__link
+						+icon('search', 'mobile-user-nav__icon')
+				li.mobile-user-nav__item
+					a(href="").mobile-user-nav__link
+						+icon('user', 'mobile-user-nav__icon')
+				li.mobile-user-nav__item
+					a(href="").mobile-user-nav__link
+						+icon('basket', 'mobile-user-nav__icon')

@@ -34,6 +34,9 @@
 			margin-bottom: 30px;
 			width: 100%;
 		}
+		@media screen and (max-width: $phone-size) {
+			overflow: auto;
+		}
 		&__item {
 			border-bottom: 2px solid $alto;
 			line-height: 48px;

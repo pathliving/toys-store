@@ -10,6 +10,9 @@
 		@media screen and (max-width: $tablet-size) {
 			padding: 40px 0 0 0;
 		}
+		@media screen and (max-width: $phone-size) {
+			padding: 30px 0;
+		}
 		.container {
 			align-items: flex-start;
 			display: flex;
@@ -28,17 +31,63 @@
 			margin-right: 0;
 			width: 226px;
 		}
-		&:last-child { margin-right: 0; }
+		@media screen and (max-width: $phone-size) {
+			flex: 0 0 46%;
+			font-size: $base-font-size - 4px;
+			width: 46%;
+			margin-bottom: 20px;
+			max-width: 100%;
+		}
+		&:last-child {
+			margin-right: 0;
+			@media screen and (max-width: $phone-size) {
+				margin-bottom: 0;
+			}
+		}
+		&.footer__item {
+			&--wide {
+				@media screen and (max-width: $phone-size) {
+					flex: 1;
+					flex-direction: row;
+					width: 100%;
+					justify-content: space-between;
+				}
+				& > * {
+					@media screen and (max-width: $phone-size) {
+						flex: 0 0 45%;
+						width: 45%;
+						margin: 0;
+					}
+				}
+			}
+			&--full {
+				@media screen and (max-width: $phone-size) {
+					flex: 1;
+					flex-direction: row;
+					width: 100%;
+				}
+			}
+			// &--text-right {
+			// 	text-align: right;
+			// }
+		}
 		& > * {
 			margin: 15px 0;
+			@media screen and (max-width: $phone-size) {
+				margin: 5px 0;
+			}
 			&:first-child { margin-top: 0; }
 			&::last-child { margin-bottom: 0; }
 		}
 	}
 	&__socials {
 		padding: 30px 0;
+		display: flex;
 		@media screen and (max-width: $tablet-size) {
 			padding: 0 0 30px 0;
+		}
+		@media screen and (max-width: $phone-size) {
+			width: 100%;
 		}
 		.facebook {
 			@media screen and (max-width: $tablet-size) {
@@ -61,9 +110,18 @@
 				font-size: $base-font-size - 4px;
 				line-height: 1.67;
 			}
+			@media screen and (max-width: $phone-size) {
+				align-items: center;
+				flex-direction: column;
+				text-align: center;
+			}
 			& > * {
 				flex: 0 0 45%;
 				width: 45%;
+				@media screen and (max-width: $phone-size) {
+					flex: 1;
+					width: 100%;
+				}
 			}
 		}
 	}
@@ -72,6 +130,10 @@
 		text-align: right;
 		margin: auto;
 		margin-right: 0;
+		@media screen and (max-width: $phone-size) {
+			margin-top: 10px;
+			text-align: center;
+		}
 	}
 	&__contacs {
 		margin-left: auto;
@@ -85,6 +147,9 @@
 			width: 100%;
 			@media screen and (max-width: $tablet-size) {
 				display: flex;
+			}
+			@media screen and (max-width: $phone-size) {
+				flex-wrap: wrap;
 			}
 		}
 	}
@@ -102,6 +167,9 @@
 		color: $mine-shaft;
 		font-size: $base-font-size + 4px;
 		font-weight: 600;
+		@media screen and (max-width: $phone-size) {
+			font-size: $base-font-size;
+		}
 	}
 	&__mail {
 		color: $mine-shaft;
@@ -111,6 +179,7 @@
 	}
 	&__adress {
 		line-height: 1.79;
+		font-weight: 600;
 	}
 	&__navigation {		
 		align-items: flex-start;
@@ -121,15 +190,21 @@
 			justify-content: space-between;
 			width: 100%;
 		}
+		@media screen and (max-width: $phone-size) {
+			flex-wrap: wrap;
+		}
 	}
 	&__text {
 		&-phone {
 			font-size: $base-font-size;
+			@media screen and (max-width: $phone-size) {
+				font-size: $base-font-size - 2px;
+			}
 		}
 	}
 	&-nav {
 		&__item {
-			margin-bottom: 15px;
+			margin-bottom: 10px;
 			&:last-child { margin-bottom: 0; }
 		}
 		&__link {
@@ -148,14 +223,22 @@
 		width: 100%;
 		justify-content: space-between;
 	}
+	@media screen and (max-width: $phone-size) {
+		justify-content: center;
+	}
 	&__item {
 		margin-right: 50px;
-		&:last-child { margin-right: 0;	}
 		@media screen and (max-width: $tablet-size) {
 			flex: 0 0 216px;
 			margin-right: 0;
 			width: 216px;
 		}
+		@media screen and (max-width: $phone-size) {
+			flex: auto;
+			margin-right: 80px;
+			width: 100%;
+		}
+		&:last-child { margin-right: 0;	}		
 	}
 	&__link {
 		align-items: center;
@@ -164,7 +247,15 @@
 		font-weight: 300;
 		& > * {
 			margin-right: 15px;
+			@media screen and (max-width: $phone-size) {
+				margin-right: 0;
+			}
 			&:last-child { margin-right: 0; }
+		}
+	}
+	&__name {
+		@media screen and (max-width: $phone-size) {
+			display: none;
 		}
 	}
 }
@@ -178,11 +269,23 @@
 		margin-left: 0;
 		flex-direction: column;
 	}
+	@media screen and (max-width: $phone-size) {
+		align-items: center;
+		flex-direction: row;
+		align-items: center;
+		width: 100%;
+	}
 	& > * {
 		margin-right: 20px;
 		@media screen and (max-width: $tablet-size) {
 			margin-right: 0;
 			margin-bottom: 10px;
+		}
+		@media screen and (max-width: $phone-size) {
+			// align-items: center;
+			// flex-direction: row;
+			// justify-content: center;
+			margin-right: 15px;
 		}
 		&:last-child { margin-right: 0; }
 	}

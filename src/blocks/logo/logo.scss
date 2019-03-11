@@ -1,5 +1,17 @@
 .logo {
   &__img {
-    height: 22px;
-  }
+		height: 22px;
+		@media screen and (max-width: $phone-size) {
+			height: 16px;
+		}
+	}	
+}
+
+.mobile {
+	&__logo {
+		display: none;
+		@media screen and (max-width: $phone-size) {
+			display: block;
+		}
+	}
 }

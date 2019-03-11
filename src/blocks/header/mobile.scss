@@ -1,17 +1,33 @@
-.header {
-  &__mobile {
-		display: none;
-		position: relative;
-		.container {
-			display: flex;
-			justify-content: space-between;
-			& > * {
-				flex: 0 0 48%;
-				width: 48%;
+.header__mobile {
+	display: none;
+	position: relative;
+	.container {
+		display: flex;
+		justify-content: space-between;
+		@media screen and (max-width: $phone-size) {
+			align-items: center;
+			justify-content: flex-start;
+			padding: 0;
+		}
+		& > * {
+			flex: 0 0 48%;
+			width: 48%;
+			@media screen and (max-width: $phone-size) {
+				flex: 0 0 auto;
+				width: auto;
 			}
 		}
+	}
+	@media screen and (max-width: $tablet-size) {
+		display: block;
+	}
+	.search {
+		display: none;
 		@media screen and (max-width: $tablet-size) {
 			display: block;
+		}
+		@media screen and (max-width: $phone-size) {
+			display: none;
 		}
 	}
 }

@@ -2,20 +2,7 @@
 	cursor: pointer;
 	height: 16px;
 	position: relative;
-	width: 20px;
-	&--active {
-		.sandwich__line {
-			&--top {
-				top: 7px;
-				transform: rotate(45deg);
-			}
-			&--middle { opacity: 0; }
-			&--bottom {
-				top: 7px;
-				transform: rotate(-45deg);
-			}
-		}
-	}
+	width: 20px;	
 	&__line {
 		background-color: $white;
 		display: block;

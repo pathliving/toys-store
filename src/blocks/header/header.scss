@@ -28,6 +28,9 @@
 	}
 	&__main {
 		padding: 25px 0;
+		@media screen and (max-width: $phone-size) {
+			display: none;
+		}
 	}
 	&__phones {
 		display: flex;

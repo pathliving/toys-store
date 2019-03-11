@@ -61,7 +61,15 @@ $(document).ready(function () {
 			customPaging: function(slider, i) {
 				return '<div class="banner__dot"></div>';
 			},
-			appendDots: '.banner__dots'
+			appendDots: '.banner__dots',
+			responsive: [
+				{
+					breakpoint: 768,
+					settings: {
+						arrows: false,
+					}
+				}
+			]
 		})
 	};
 
