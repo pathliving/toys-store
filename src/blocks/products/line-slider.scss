@@ -7,6 +7,13 @@
 			display: flex;
 		}
 	}
+	.product-prev {
+		border-color: transparent;
+		@media screen and (max-width: 549px) {
+			border-color: $alto;
+			margin: 10px 0 30px;
+		}
+	}
 	&__btn {
 		@include size(40px);
 		align-items: center;

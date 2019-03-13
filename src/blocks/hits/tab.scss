@@ -11,9 +11,11 @@
 
 .tabs {
   &-navigation {
+    overflow: hidden;
     &__item {
       cursor: pointer;
-      transition: all linear 0.3s;
+      // transition: all linear 0.3s;
+      min-width: 150px;
       white-space: nowrap;
     }
   }

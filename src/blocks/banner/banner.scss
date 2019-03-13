@@ -147,6 +147,7 @@
 		}
 		@media screen and (max-width: $phone-size) {
 			min-width: 120px;
+			// max-height: 140px; for IE
 		}
 		&-wrapper {
 			flex: 1;

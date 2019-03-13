@@ -1,35 +1,43 @@
-@import "src/scss/vars.scss";
+@import "src/scss/vars";
 
 html {
-    font-size: $base-font-size;
-		height: 100%;
-		overflow-x: hidden;
-		width: 100%;
+	font-size: $base-font-size;
+	height: 100%;
+	// overflow-x: hidden;
+	// width: 100%;
+	// height: 100%;
+	&.fixed {
+		overflow: hidden;
+		body {
+			overflow: hidden;
+		}
+	}
 }
 
 body {
-    font-family: $main-font;
-    height: 100%;
-		margin: 0;
-		overflow-x: hidden;
-		width: 100%;
-		&.fixed {
-			overflow: hidden;
-		}
+	color: $mine-shaft;
+	font-family: $main-font;
+	height: 100%;
+	margin: 0;
+	// overflow-x: hidden;
+	// width: 100%;
+	// &.fixed {
+	// 	overflow: hidden;
+	// }
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 0;
+	margin: 0;
 }
 
 ul, li {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 p {
@@ -60,6 +68,12 @@ input, select, button {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
+	left: 0;
+	position: relative;
+	transition: all linear 0.5s;
+	&.mobile-menu-open {
+		left: 100%;
+	}
 }
 
 .content {

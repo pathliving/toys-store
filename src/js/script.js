@@ -159,12 +159,20 @@ $(document).ready(function () {
 
 	let mobileMenu = function () {
 		$(document).on('click', '.mobile-menu__toggle', function () {
-			$(this).parent().addClass('mobile-menu--open')
+			$(this).parent().addClass('mobile-menu--open');
+			if ($(window).width() < 768) {
+				$('html').addClass('fixed');
+				$('.wrapper').addClass('mobile-menu-open');
+			}
 		});
 		$(document).on('click', '.mobile-menu__close', function () {
-			$(this).closest('.mobile-menu').removeClass('mobile-menu--open')
+			$(this).closest('.mobile-menu').removeClass('mobile-menu--open');
+			if ($(window).width() < 768) {
+				$('html').removeClass('fixed');
+				$('.wrapper').removeClass('mobile-menu-open');
+			}
 		});
-	}
+	};
 
 	catalogNavHover();
 	openSearchForm();
@@ -183,7 +191,7 @@ $(document).ready(function () {
 $(window).on('load', function () {
 	$('.sk-circle').fadeOut();
 	$('.preloader').delay(400).fadeOut('slow');
-	$('body').removeClass('fixed');
+	$('html').removeClass('fixed');
 });
 
 // Polyfills for IE11

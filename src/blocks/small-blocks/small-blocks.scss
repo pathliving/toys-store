@@ -1,0 +1,10 @@
+.mobile-scroll {
+  &-wrapper {
+    margin: 0 -15px !important;
+    overflow: auto;
+  }
+  &-inner {
+    display: inline-block;
+    padding: 0 15px;
+  }
+}
