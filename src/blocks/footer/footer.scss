@@ -67,9 +67,6 @@
 					width: 100%;
 				}
 			}
-			// &--text-right {
-			// 	text-align: right;
-			// }
 		}
 		& > * {
 			margin: 15px 0;
@@ -282,9 +279,6 @@
 			margin-bottom: 10px;
 		}
 		@media screen and (max-width: $phone-size) {
-			// align-items: center;
-			// flex-direction: row;
-			// justify-content: center;
 			margin-right: 15px;
 		}
 		&:last-child { margin-right: 0; }

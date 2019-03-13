@@ -40,14 +40,8 @@
 			@media screen and (max-width: $phone-size) {
 				height: auto;
 				margin-bottom: 20px;
-				// margin-top: 40px;
 			}
 		}
-		// &:first-child {
-		// 	@media screen and (max-width: $phone-size) {
-		// 		margin-top: 0;
-		// 	}
-		// }
 		&__link {
 			color: $mine-shaft;
 			border-bottom: 1px solid rgba(38, 38, 38, 0.15);
@@ -56,6 +50,7 @@
 		}
 		&__count {
 			color: $chelsea-cucumber;
+			font-size: $base-font-size - 2px;
 		}
 		&__footer {
 			display: flex;
@@ -67,13 +62,12 @@
 		&.information-item--wide {
 			@media screen and (max-width: $tablet-size) {
 				flex: 1;
-				// margin-top: 40px;
 				width: 100%;
 			}
 			.information-item {
 				&__body {
 					@media screen and (max-width: $tablet-size) {
-						height: 110px;
+						height: auto;
 					}
 					@media screen and (max-width: $phone-size) {
 						height: auto;

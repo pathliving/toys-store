@@ -36,12 +36,12 @@ mixin information()
 						h2.title-section Бренды
 					.information-item__body
 						.brands__wrapper
-							ul.brands__list.brands__list--small
+							ul.brands__list
 								each brand in [{img: 'puky', name: 'PUKY'}, {img: 'hudora', name: 'HUDORA'}, {img: 'globber', name: 'GLOBBER'}, {img: 'kokua', name: 'KOKUA'}, {img: 'micro', name: 'MICRO'}, {img: 'stiga', name: 'STIGA'}]
 									li.brands__item
 										a(href="").brand
 											img(src=`img/${brand.img}.jpg`).brand__img
 											span.brand__name=brand.name
 					.information-item__footer
-						a(href="").information-item__link Все бренды
+						a(href="brands.html").information-item__link Все бренды
 						span.information-item__count (9)

@@ -1,28 +1,31 @@
-.brands__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-  @media screen and (max-width: $phone-size) {
-    justify-content: flex-start;
-    // flex-wrap: nowrap;
-    // overflow: auto;
-    // margin-right: -15px;
-  }
-  & > * {
-    margin-right: 10px;
-    margin-bottom: 10px;
-    &:nth-child(6n + 6) {
-      margin-right: 0;
+.brands {
+  border-top: 1px solid $alto;
+  padding: 30px 0;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    & > * {
+      margin-right: 10px;
+      margin-bottom: 45px;
+      flex: 0 0 15%;
+      width: 15%;
+      @media screen and (max-width: $tablet-size) {
+        margin-bottom: 0;
+        flex: 0 0 25%;
+        width: 25%;
+      }
+      @media screen and (max-width: $phone-size) {
+        margin-bottom: 0;
+        flex: 0 0 46%;
+        width: 46%;
+      }
+    }
+    @media screen and (max-width: $phone-size) {
+      justify-content: flex-start;
     }
   }
 }
-
-// .brands {
-//   &__wrapper {
-//     margin-right: -15px;
-//   }
-// }
 
 .brand {
   align-items: center;

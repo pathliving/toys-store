@@ -1,5 +1,6 @@
 include ../search/search
 include ../small-blocks/icon
+include ../sandwich/sandwich
 
 mixin mainSubnavLink(link,text)
 	li.catalog-nav__item
@@ -15,10 +16,7 @@ mixin informNavLink(link,text)
 	.container
 		.mobile-menu
 			.mobile-menu__toggle
-				.mobile-menu__sandwich.sandwich
-					.sandwich__line.sandwich__line--top
-					.sandwich__line.sandwich__line--middle
-					.sandwich__line.sandwich__line--bottom
+				+sandwich()
 				span.mobile-menu__title Каталог товаров
 			.mobile-menu__content
 				.mobile-menu__header
@@ -46,8 +44,12 @@ mixin informNavLink(link,text)
 						.mobile-menu__phone
 							a(href="tel:0441453030").mobile-menu__phone-number (044) 145-14-14
 							span.mobile-menu__phone-text Звонок бесплатный
-		.mobile__logo
-			+logo('logo__img')
+		if(pageClass === "index-page")
+			.mobile__logo.logo
+				img(src="img/logo.svg" alt="Логотип").logo__img
+		else
+			a(href="index.html").mobile__logo.logo
+				+logo('logo__img').logo__img
 		.search
 			+search-form()
 		nav.mobile-user-nav

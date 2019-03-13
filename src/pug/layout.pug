@@ -3,7 +3,7 @@
 include mixins.pug
 
 doctype html
-html(class='no-js  page', lang='ru')
+html(class='no-js  page', lang='ru').fixed
 
 	head
 		meta(charset='utf-8')
@@ -33,7 +33,7 @@ html(class='no-js  page', lang='ru')
 			script.
 				document.querySelector('html').classList.replace('no-js', 'js');'ontouchstart' in window ? document.querySelector('html').classList.add('touch') : document.querySelector('html').classList.add('no-touch');
 
-	body.fixed
+	body
 		.preloader
 			.sk-circle
 				.sk-circle1.sk-child

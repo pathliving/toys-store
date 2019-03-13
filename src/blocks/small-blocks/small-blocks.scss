@@ -6,5 +6,51 @@
   &-inner {
     display: inline-block;
     padding: 0 15px;
+    width: 100%;
+  }
+}
+
+.breadcrumbs {
+  padding: 30px 20px;
+  &__list {
+    align-items: center;
+    display: flex;
+  }
+  &__item {
+    align-items: center;
+    display: flex;
+    &:after {
+      content: '';
+      background-image: url('../img/breadcrumb-arrow.png');
+      display: inline-block;
+      height: 11px;
+      margin: 0 10px;
+      width: 16px;
+    }
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+  }
+  &__link {
+    color: $tundora;
+    font-size: $base-font-size - 4px;
+    &:hover {
+      text-decoration: underline;
+    }   
+  }
+  &__current {
+    color: $tundora;
+    font-size: $base-font-size - 4px;  
+  }
+}
+
+.content-block {
+  margin-top: 20px;
+  & > * {
+    margin: 20px 0;
+    &:first-child { margin-top: 0; }
+    &:last-child { margin-bottom: 0; }
   }
 }

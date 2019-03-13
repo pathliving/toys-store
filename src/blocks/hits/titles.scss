@@ -1,8 +1,21 @@
 .title {
+  &-page {
+    color: $tundora;
+    font-size: $base-font-size * 2 - 2px;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 50px;
+  }
   &-section {
     font-size: $base-font-size + 8px;
     font-weight: 600;
     line-height: 1.67;
+    margin-bottom: 20px;
+  }
+  &-block {
+    font-size: $base-font-size + 4px;
+    font-weight: 600;
+    line-height: 1.5;
     margin-bottom: 20px;
   }
 }

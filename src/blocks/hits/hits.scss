@@ -6,6 +6,7 @@
   &-navigation {
     align-items: center;
     display: flex;
+    overflow: auto;
     &__item {
       border-bottom: 2px solid $alto;
       flex: 1;
