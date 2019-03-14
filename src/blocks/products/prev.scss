@@ -1,7 +1,6 @@
 .product-prev {
 	border: 1px solid $alto;
 	outline: none;
-	margin: 10px 15px 30px;
 	padding: 20px;
 	padding-top: 190px;
 	position: relative;
@@ -39,9 +38,12 @@
 		margin-bottom: 20px;
 	}
 	&__title {
-		font-size: $base-font-size - 2px;
+		font-size: $base-font-size;
 		font-weight: 600;
 		line-height: 1.43;
+	}
+	&__country {
+		font-size: $base-font-size - 2px;
 	}
 	&__price {
 		align-items: baseline;

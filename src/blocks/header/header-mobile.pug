@@ -1,6 +1,7 @@
 include ../search/search
 include ../small-blocks/icon
 include ../sandwich/sandwich
+include ../search/search
 
 mixin mainSubnavLink(link,text)
 	li.catalog-nav__item
@@ -55,7 +56,7 @@ mixin informNavLink(link,text)
 		nav.mobile-user-nav
 			ul.mobile-user-nav__list
 				li.mobile-user-nav__item
-					a(href="").mobile-user-nav__link
+					a(href="search.html").mobile-user-nav__link
 						+icon('search', 'mobile-user-nav__icon')
 				li.mobile-user-nav__item
 					a(href="").mobile-user-nav__link

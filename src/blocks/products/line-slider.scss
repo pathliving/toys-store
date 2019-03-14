@@ -9,6 +9,7 @@
 	}
 	.product-prev {
 		border-color: transparent;
+		margin: 10px 15px 30px;
 		@media screen and (max-width: 549px) {
 			border-color: $alto;
 			margin: 10px 0 30px;

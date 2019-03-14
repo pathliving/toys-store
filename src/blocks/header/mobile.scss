@@ -2,6 +2,9 @@
 	display: none;	
 	position: relative;
 	@media screen and (max-width: $phone-size) {
+		display: block;
+	}
+	@media screen and (max-width: $phone-size) {
 		box-shadow: 0 1px 3px 0 rgba(38, 38, 38, 0.5), inset 0 -1px 0 0 #eef2f4;
 		z-index: 5;
 	}

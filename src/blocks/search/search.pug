@@ -8,11 +8,10 @@ mixin search()
 
 mixin search-form()
 
-	.search__body.search__body--hidden
-		form.search__form
-			.search__input-wrapper
-				input(placeholder="Я хочу купить...").search__input
-				.search__clear
-					+icon('close', 'search__clear-icon')
-			button(type="button" value="Найти").search__btn Найти
-			
+	form.search__form
+		.search__input-wrapper
+			input(placeholder="Я хочу купить...").search__input
+			.search__clear
+				+icon('close', 'search__clear-icon')
+		button(type="button" value="Найти" onClick='location.href="search.html"').search__btn Найти
+		

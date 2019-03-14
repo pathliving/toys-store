@@ -1,5 +1,6 @@
 .review-prev {
   &__text {
+    font-size: $base-font-size - 2px;
     line-height: 1.79;
     margin-bottom: 15px;
   }

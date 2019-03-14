@@ -47,7 +47,7 @@ $(document).ready(function () {
 
 	let searchButton = function () {
 		$(document).on('click', '.search__btn', function () {
-			alert('Благодарим за ваш интерес!')
+			console.log('Search works fine!')
 		})
 	};
 
