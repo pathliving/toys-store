@@ -52,6 +52,9 @@
 					margin-right: 30px;
 				}
 			}
+			&:hover {
+				border-bottom-color: $blaze-orange;
+			}
 			&.tabs-navigation__item--active {
 				border-bottom-color: $blaze-orange;
 			}
@@ -60,8 +63,12 @@
 }
 
 .text {
-	line-height: 1.79;
 	font-size: $base-font-size - 2px;
+	font-weight: normal;
+	line-height: 1.79;
+	@media screen and (max-width: $phone-size) {
+		font-size: $base-font-size - 4px;
+	}
 }
 
 .s-about {

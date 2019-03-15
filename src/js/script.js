@@ -114,7 +114,7 @@ $(document).ready(function () {
 			});
 		});
 	};
-
+	
 	let productLineSlider = function () {
 		$('.js-products-line-slider').each(function (idx) {
 			let productsLineSliderID = "products-line-slider-" + idx;
@@ -130,6 +130,43 @@ $(document).ready(function () {
 				customPaging: function (slider, i) {
 					return '<div class="products-line-slider__dot"></div>';
 				},
+				responsive: [
+					{
+						breakpoint: 1139,
+						settings: {
+							slidesToShow: 3,
+							slidesToScroll: 3
+						}
+					},
+					{
+						breakpoint: 768,
+						settings: {
+							slidesToShow: 2,
+							slidesToScroll: 2
+						}
+					},
+					{
+						breakpoint: 550,
+						settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1
+						}
+					}
+				]
+			});
+		});
+	};
+
+	let productBorderLineSlider = function () {
+		$('.js-products-border-line-slider').each(function (idx) {
+			let productsBorderLineSliderID = "products-border-line-slider-" + idx;
+			this.closest('.products-border-line-slider').id = productsBorderLineSliderID;
+			$(this).slick({
+				slidesToShow: 4,
+				slidesToScroll: 1,
+				infinite: false,
+				prevArrow: '#' + productsBorderLineSliderID + ' .products-border-line-slider__btn--prev',
+				nextArrow: '#' + productsBorderLineSliderID + ' .products-border-line-slider__btn--next',
 				responsive: [
 					{
 						breakpoint: 1139,
@@ -174,6 +211,14 @@ $(document).ready(function () {
 		});
 	};
 
+	let brandInfo = function () {
+		if (window.innerWidth < 1140 && window.innerWidth > 767) {
+				$('.brand__certificates').appendTo('.brand-info__tablet');
+		} else {
+				$('.brand__certificates').appendTo('.brand-info');
+		}
+};
+
 	catalogNavHover();
 	openSearchForm();
 	clearSearchForm();
@@ -183,7 +228,9 @@ $(document).ready(function () {
 	tabs();
 	productPrevSlider();
 	productLineSlider();
+	productBorderLineSlider();
 	mobileMenu();
+	brandInfo();
 
 });
 
@@ -192,6 +239,17 @@ $(window).on('load', function () {
 	$('.sk-circle').fadeOut();
 	$('.preloader').delay(400).fadeOut('slow');
 	$('html').removeClass('fixed');
+});
+
+$(window).on('resize', function () {
+	let brandInfo = function () {
+			if (window.innerWidth < 1140 && window.innerWidth > 767) {
+					$('.brand__certificates').appendTo('.brand-info__tablet');
+			} else {
+					$('.brand__certificates').appendTo('.brand-info');
+			}
+	};
+	brandInfo();
 });
 
 // Polyfills for IE11

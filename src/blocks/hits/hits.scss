@@ -15,6 +15,9 @@
       line-height: 48px;
       text-align: center;
       &:last-child { margin-right: 0; }
+			&:hover {
+				border-bottom-color: $blaze-orange;
+			}
       &.tabs-navigation__item--active {
         border-bottom-color: $blaze-orange;
       }

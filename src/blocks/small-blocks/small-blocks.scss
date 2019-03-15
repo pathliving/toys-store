@@ -36,18 +36,21 @@
   &__link {
     color: $tundora;
     font-size: $base-font-size - 4px;
+    font-weight: 600;
     &:hover {
       text-decoration: underline;
     }   
   }
   &__current {
     color: $tundora;
-    font-size: $base-font-size - 4px;  
+    font-size: $base-font-size - 4px;
+    font-weight: 600;
   }
 }
 
 .content-block {
   margin-top: 20px;
+  font-weight: normal;
   & > * {
     margin: 20px 0;
     &:first-child { margin-top: 0; }

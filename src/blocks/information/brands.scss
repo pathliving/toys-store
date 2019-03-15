@@ -1,45 +1,137 @@
 .brands {
-  border-top: 1px solid $alto;
-  padding: 30px 0;
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    & > * {
-      margin-right: 10px;
-      margin-bottom: 45px;
-      flex: 0 0 15%;
-      width: 15%;
-      @media screen and (max-width: $tablet-size) {
-        margin-bottom: 0;
-        flex: 0 0 25%;
-        width: 25%;
-      }
-      @media screen and (max-width: $phone-size) {
-        margin-bottom: 0;
-        flex: 0 0 46%;
-        width: 46%;
-      }
-    }
-    @media screen and (max-width: $phone-size) {
-      justify-content: flex-start;
-    }
-  }
+	border-top: 1px solid $alto;
+	padding: 30px 0;
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-bottom: -45px;
+		@media screen and (max-width: $tablet-size) {
+			margin-bottom: 20px;
+		}
+		& > * {
+			margin-right: 10px;
+			margin-bottom: 45px;
+			flex: 0 0 15%;
+			width: 15%;
+			@media screen and (max-width: $tablet-size) {
+				margin-bottom: 0;
+				flex: 0 0 25%;
+				width: 25%;
+			}
+			@media screen and (max-width: $phone-size) {
+				margin-bottom: 0;
+				flex: 0 0 46%;
+				width: 46%;
+			}
+		}
+		@media screen and (max-width: $phone-size) {
+			justify-content: flex-start;
+		}
+	}
 }
 
 .brand {
-  align-items: center;
-  color: $mine-shaft;
-  display: flex;
-  flex-direction: column;
-  &__img {
-    margin-bottom: 10px;
-    transition: all linear 0.3s;
-    &:hover {
-      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.05);
-    }
-  }
-  &__name {
-    margin-bottom: 35px;
-  }
+	align-items: center;
+	color: $mine-shaft;
+	display: flex;
+	flex-direction: column;
+	&__img {
+		margin-bottom: 10px;
+		transition: all linear 0.3s;
+		&:hover {
+			box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+		}
+	}
+	&__name {
+		margin-bottom: 35px;
+	}
+	&-info {
+		align-items: flex-start;
+		display: flex;
+		@media screen and (max-width: $phone-size) {
+			flex-direction: column;
+		}
+		@media screen and (max-width: $tablet-size) {
+			padding-bottom: 30px;
+		}
+		& > * {
+			margin-right: 30px;
+			@media screen and (max-width: $phone-size) {
+				margin-right: 0;
+				margin-bottom: 30px;
+			}
+			&:last-child {
+				margin-right: 0;
+				@media screen and (max-width: $phone-size) {
+					margin-bottom: 0;
+				}
+			}
+		}
+		&__tablet {
+			flex: 0 0 255px;
+			width: 255px;
+			@media screen and (max-width: $phone-size) {
+				flex: 1;
+				width: 100%;
+			}
+			& > * {
+				margin: 20px 0;
+				&:first-child { margin-top: 0; }
+				&:last-child { margin-bottom: 0; }
+			}
+		}
+		&__logo {
+			width: 100%;
+		}
+	}
+	&__logo {
+		align-items: center;
+		border: 1px solid $alto;
+		border-radius: 2px;
+		display: flex;
+		justify-content: center;
+		padding: 40px;
+		.brand__img {
+			&:hover {
+				box-shadow: none;
+			}
+		}
+	}
+	&__description {
+		flex: 1;
+		& > * {
+			margin: 20px 0;
+			&:first-child { margin-top: 0; }
+			&::last-child { margin-bottom: 0; }
+		}
+	}
+	&__certificates {
+		flex: 0 0 255px;
+		width: 255px;
+		@media screen and (max-width: $phone-size) {
+			flex: 1;
+			text-align: center;
+			width: 100%;
+		}
+		&-label {
+			display: block;
+			font-weight: 700;
+			line-height: 1.79;
+			margin-bottom: 15px;
+		}
+	}
+	&__certificate {
+		align-items: center;
+		border: 1px solid $alto;
+		border-radius: 2px;
+		display: flex;
+		justify-content: center;
+		@media screen and (max-width: $phone-size) {
+			border: none;
+		}
+	}
+	&__content-block {
+		padding-bottom: 30px;
+	}
 }

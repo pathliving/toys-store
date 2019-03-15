@@ -5,10 +5,12 @@
 	padding: 30px 0;
 	@media screen and (max-width: $phone-size) {
 		padding-top: 0;
-		.container {
-			padding: 0;
-		}
 	}	
+	.container {
+		@media screen and (max-width: $phone-size) {
+			padding: 0;
+		}	
+	}
 }
 
 .banner {
