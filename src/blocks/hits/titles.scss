@@ -4,7 +4,7 @@
     font-size: $base-font-size * 2 - 2px;
     font-weight: 700;
     line-height: 1.25;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
   &-section {
     font-size: $base-font-size + 8px;
@@ -16,6 +16,12 @@
     font-size: $base-font-size + 4px;
     font-weight: 600;
     line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  &-small {
+    font-size: $base-font-size;
+    font-weight: 700;
+    line-height: 1.25;
     margin-bottom: 20px;
   }
 }

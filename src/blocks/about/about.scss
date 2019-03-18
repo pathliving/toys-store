@@ -2,7 +2,6 @@
 	display: flex;	
 	@media screen and (max-width: $tablet-size) {
 		flex-direction: column;
-		margin-bottom: 30px;
 	}
 	& > * {
 		margin-right: 30px;
@@ -11,11 +10,17 @@
 	&__body {
 		flex: 1;
 		min-height: 245px;
+		@media screen and (max-width: $phone-size) {
+			min-height: 230px;
+		}
 		@media screen and (max-width: $tablet-size) {
 			order: 2;
-			min-height: 270px;
+			min-height: 266px;
 		}
 		.tab {
+			@media screen and (max-width: $tablet-size) {
+				
+			}
 			& > * {
 				margin: 15px 0;
 				&:first-child { margin-top: 0; }
@@ -62,19 +67,10 @@
 	}
 }
 
-.text {
-	font-size: $base-font-size - 2px;
-	font-weight: normal;
-	line-height: 1.79;
-	@media screen and (max-width: $phone-size) {
-		font-size: $base-font-size - 4px;
-	}
-}
-
 .s-about {
 	padding: 30px 0 30px 0;
 	font-size: $base-font-size - 2px;
 	@media screen and (max-width: $tablet-size) {
-		padding: 30px 0 0 0;
+		padding: 30px 0 40px 0;
 	}
 }
