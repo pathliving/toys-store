@@ -1,0 +1,108 @@
+extends ../pug/layout.pug
+
+include ../blocks/header/header
+include ../blocks/footer/footer
+include ../blocks/slider/slider
+include ../blocks/products/prev-1
+include ../blocks/products/prev-2
+include ../blocks/products/prev-3
+include ../blocks/products/prev-4
+include ../blocks/small-blocks/icon
+include ../blocks/filter/filter
+
+block meta
+	title Беговелы
+	meta(name='description', content='')
+
+block append head
+	link(rel='stylesheet', href='css/style.css')
+
+block header
+	+header()
+
+block content
+	.container
+		.breadcrumbs
+			ul.breadcrumbs__list
+				li.breadcrumbs__item
+					a(href='index.html').breadcrumbs__link Главная
+				li.breadcrumbs__item
+					a(href='index.html').breadcrumbs__link Каталог
+				li.breadcrumbs__item
+					span.breadcrumbs__current Беговелы
+	.container
+		+slider()
+	.container
+		.category
+			.category__header
+				h1.title-page Беговелы
+				.category__sort
+					.select
+						.select__header.select__header--multi
+							span.select__description Сортировать по:
+							span.select__current популярности
+							+icon('chevron-down', 'select__icon')
+						.select__body
+							ul.select-list
+								li.select-list__item возрастанию цены
+								li.select-list__item снижению цены
+								li.select-list__item новизне
+			.category__body
+				aside.filter.category__filter
+					+filter()
+				main.category-main
+					section.s-category-main
+						.products-prev__wrapper.products-prev__wrapper--small
+							+prev-3()
+							+prev-1()
+							+prev-4()
+							+prev-2()
+							+prev-3()
+							+prev-1()
+							+prev-4()
+							+prev-2()
+							+prev-3()
+						.pagination__wrapper
+							.pagination
+								a(href='').pagination__btn
+									+icon('chevron-left', 'pagination__icon')
+								ul.pagination__list
+									each i in [1,2,3,4,5]
+										if(i===1)
+											li.pagination__item.pagination__item--active
+												a(href='').pagination__link=i
+										else
+											li.pagination__item
+												a(href='').pagination__link=i
+								a(href='').pagination__btn
+									+icon('chevron-right', 'pagination__icon')
+							.pagination__count
+								span.pagination__text Выводить по:
+								.select
+									.select__header
+										span.select__current 12
+										+icon('chevron-down', 'select__icon')
+										.select__body
+											ul.select-list
+												li.select-list__item 12
+												li.select-list__item 24
+												li.select-list__item 36
+					section.s-content
+						.container
+							.content-block
+								p.text-attention Интернет-магазин Baby-Toys занимается продажей зимнего и летнего транспорта для детей и их родителей. Компания работает на рынке уже больше 15 лет. За это время мы составили уникальный ассортимент товаров на любой вкус и кошелек. От классических велосипедов и санок до оригинальных беговелов и приобретающих все большую популярность снегокатов!
+								h3.title-block
+								p.text Активный отдых — важная составляющая жизни современного человека. Совместные прогулки с детьми, катание на самокате или коньках повышает настроение, развивает силу и ловкость и способствует дружескому общению. Мы прекрасно понимаем это, поэтому предлагаем лучшие транспортные средства ведущих мировых производителей. Самые яркие, удобные, надежные и безопасные.
+								p.text В каталог не попадают «случайные» товары. Мы сотрудничаем с известными во всем мире производителями, тщательно анализируем рынок и выставляем на продажу скейты, ролики, самокаты, беговелы, санки и снегокаты, завоевавшие положительные отклики у покупателей.
+								p.text Модели изготавливаются из высококачественных нетоксичных материалов по передовым технологиям. Они функциональны, удобны и безопасны. Готовая продукция имеет устойчивую конструкцию. Но главное — многочисленные восторженные отзывы ездоков и их родителей — тех, кто уже успел опробовать транспорт на собственном опыте. Все товары сертифицированы, на них предоставляется гарантия с возможностью обслуживания в сервисном центре.
+								h3.title-block Купить беговелы в Киеве
+								p.text Задать вопросы о покупке можно прямо на сайте — через онлайн-форму внизу окна. Кроме того, специалисты готовы дать консультацию по телефонному номеру (044) 145-30-30. Также можно заказать обратный звонок, указав в комментарии удобное время для общения со специалистом.
+								p.text Тех, кто считает, что лучше «один раз увидеть», мы приглашаем на наш склад.
+
+block footer
+	+footer()
+
+block page-bottom
+	script(src='js/jquery.min.js')
+	script(src='js/slick.min.js')
+	script(src='js/bundle.js')

@@ -96,5 +96,16 @@
   margin-bottom: 20px;
 	@media screen and (max-width: $phone-size) {
 		font-size: $base-font-size - 4px;
-	}
+  }
+  &-attention {
+    border-left: 3px solid $blaze-orange;
+    font-size: $base-font-size - 2px;
+    font-style: italic;
+    line-height: 1.79;
+    padding-left: 20px;
+  }
+}
+
+.s-content {
+  margin-bottom: 30px;
 }

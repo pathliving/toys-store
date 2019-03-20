@@ -132,7 +132,7 @@ $(document).ready(function () {
 				},
 				responsive: [
 					{
-						breakpoint: 1139,
+						breakpoint: 1140,
 						settings: {
 							slidesToShow: 3,
 							slidesToScroll: 3
@@ -169,7 +169,7 @@ $(document).ready(function () {
 				nextArrow: '#' + productsBorderLineSliderID + ' .products-border-line-slider__btn--next',
 				responsive: [
 					{
-						breakpoint: 1139,
+						breakpoint: 1140,
 						settings: {
 							slidesToShow: 3,
 							slidesToScroll: 3
@@ -217,7 +217,53 @@ $(document).ready(function () {
 		} else {
 				$('.brand__certificates').appendTo('.brand-info');
 		}
-};
+	};
+
+	let categorySlider = function () {
+		$('.js-category-slider').slick({
+			slidesToShow: 6,
+			arrows: false,
+			dots: true,
+			infinite: false,
+			appendDots: '.category-slider__dots',
+			customPaging: function (slider, i) {
+				return '<div class="category-slider__dot"></div>';
+			},
+			responsive: [
+				{
+					breakpoint: 1140,
+					settings: {
+						slidesToShow: 4,
+						slidesToScroll: 2
+					}
+				},
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2
+					}
+				}
+			]
+		})
+	};
+
+	let tabletSubnavMenu = function () {
+		$(document).on('click', '.inform-nav__tablet-toggle', function () {
+			$(this).toggleClass('inform-subnav--open');
+		})
+	};
+
+	let select = function () {
+		$(document).on('click','.select__header', function () {
+			$(this).parent().toggleClass('select--open');
+		});
+		$(document).on('click','.select-list__item', function () {
+			let current = $(this).closest('.select').find('.select__current')[0];
+			$(this).closest('.select').removeClass('select--open');
+			$(current).text($(this).text());
+		})
+	};
 
 	catalogNavHover();
 	openSearchForm();
@@ -231,6 +277,9 @@ $(document).ready(function () {
 	productBorderLineSlider();
 	mobileMenu();
 	brandInfo();
+	categorySlider();
+	tabletSubnavMenu();
+	select();
 
 });
 

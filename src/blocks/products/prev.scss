@@ -1,5 +1,6 @@
 .product-prev {
 	border: 1px solid $alto;
+	border-radius: 2px;
 	outline: none;
 	padding: 20px;
 	padding-top: 190px;
@@ -86,7 +87,7 @@
 		display: block;
 		outline: none;
 		&--white {
-			border: 1px solid #dddddd;
+			border: 1px solid $alto;
 		}
 	}
 	&__wrapper {

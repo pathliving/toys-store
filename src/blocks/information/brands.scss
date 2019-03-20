@@ -92,6 +92,9 @@
 		justify-content: center;
 		padding: 40px;
 		.brand__img {
+			height: auto;
+			max-width: 100%;
+			width: auto;
 			&:hover {
 				box-shadow: none;
 			}
@@ -102,7 +105,7 @@
 		& > * {
 			margin: 20px 0;
 			&:first-child { margin-top: 0; }
-			&::last-child { margin-bottom: 0; }
+			&:last-child { margin-bottom: 0; }
 		}
 	}
 	&__certificates {

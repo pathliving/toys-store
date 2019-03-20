@@ -1,0 +1,37 @@
+.category {
+	&__header {
+		align-items: center;
+		display: flex;
+		margin-bottom: 20px;
+		.title-page {
+			margin-bottom: 0;
+		}
+	}
+	&__sort {
+		margin-left: auto;
+	}
+	&__body {
+		align-items: flex-start;
+		display: flex;
+	}
+	&__filter {
+		flex: 0 0 255px;
+		margin-right: 30px;
+		width: 255px;
+	}
+	&-main {
+		flex: 1;
+	}
+}
+
+.s-category {
+	&-slider {
+		.container {
+		padding: 0;
+		}
+	}
+	&-main {
+		margin-right: -13px;
+		padding-top: 0;
+	}
+}

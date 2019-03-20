@@ -104,9 +104,9 @@
 			width: 370px;
 		}
 		@media screen and (max-width: $phone-size) {
-			font-size: $base-font-size * 2 + 8px;
+			font-size: $base-font-size * 2 + 8px !important;
 			text-align: center;
-			width: auto;
+			width: auto !important;
 		}
 		@media screen and (max-width: $phone-size-small) {
 			width: auto;
@@ -132,12 +132,12 @@
 			width: 370px;
 		}
 		@media screen and (max-width: $phone-size) {
-			width: auto;
-			font-size: $base-font-size - 3px;
+			font-size: $base-font-size - 3px !important;
+			width: auto !important;
 		}
 		@media screen and (max-width: $phone-size-small) {
-			width: auto;
 			font-size: $base-font-size - 4px;
+			width: auto;
 		}
 	}
 	&__img {

@@ -45,13 +45,13 @@ mixin informNavLink(link,text)
 						.mobile-menu__phone
 							a(href="tel:0441453030").mobile-menu__phone-number (044) 145-14-14
 							span.mobile-menu__phone-text Звонок бесплатный
-		if(pageClass === "index-page")
+		if (pageClass === "index-page")
 			.mobile__logo.logo
 				img(src="img/logo.svg" alt="Логотип").logo__img
 		else
 			a(href="index.html").mobile__logo.logo
 				+logo('logo__img').logo__img
-		.search
+		.search.search__form-mobile--hide
 			+search-form()
 		nav.mobile-user-nav
 			ul.mobile-user-nav__list

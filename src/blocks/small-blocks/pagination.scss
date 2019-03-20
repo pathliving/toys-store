@@ -1,0 +1,56 @@
+.pagination {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  &__wrapper {
+    position: relative;
+    margin-right: 13px;
+  }
+  &__btn {
+    @include size(40px);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  &__icon {
+    @include size(13px);
+    fill: $blaze-orange;
+  }
+  &__list {
+    align-items: center;
+    display: flex;
+  }
+  &__item {
+    border: 1px solid $alto;
+    border-right: 0;
+    &:last-child {
+      border-right: 1px solid $alto;
+    }
+    &.pagination__item--active {
+      .pagination__link {
+        background-color: $alto;
+      }
+    }
+  }
+  &__link {
+    @include size(40px);
+    align-items: center;
+    color: $tundora;
+    display: flex;
+    font-size: $base-font-size - 4px;
+    justify-content: center;
+  }
+  &__count {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-size: $base-font-size - 4px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    & > * {
+      margin-right: 10px;
+      &:last-child { margin-right: 0; }
+    }
+  }
+}

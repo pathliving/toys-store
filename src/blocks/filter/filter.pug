@@ -1,0 +1,34 @@
+include ../small-blocks/icon
+
+mixin filter()
+
+	.filter__block
+		span.filter__title Подкатегории
+		ul.filter-list
+			each link in ['Беговелы для детей от 2 лет','Беговелы для детей от 3 лет','Беговелы Puky','Беговелы Strider','Беговелы Merida']
+				li.filter-list__item
+					a(href='').filter-list__link=link
+	.filter__block
+		span.filter__title Подбор параметров
+		each filter in [{title: 'Пол', subf: 'Мужской', subt: 'Женский'},{title: 'Производитель', subf: 'Merida', subt: 'Puky'},{title: 'Вес, кг', subf: '1-5', subt: '5-10'},{title: 'Дополнительно', subf: 'прямой руль', subt: 'задний тормоз'},{title: 'Возраст', subf: '3-5 лет', subt: '5-12 лет'},{title: 'Особенности', subf: 'колеса со шпицами', subt: 'подножка'},{title: 'Количество колес', subf: '2', subt: '4'}]
+			.filter__row
+				.select
+					.select__header
+						span.select__current=filter.title
+						+icon('chevron-down', 'select__icon')
+					.select__body
+						ul.select-list
+							li.select-list__item=filter.subf
+							li.select-list__item=filter.subt
+		.filter__row
+			.filter-color
+				span.filter__label Цвет
+				ul.filter-color__list
+					each color in ['000000','656565','ffffff','84d6ff','3333ff','656565','ff0500','ff6500','663300','ffd701','009900','99ff9a','30d5c8','103090']
+						if (color === "ffffff")
+							li.filter-color__item.filter-color__item--white(style=`background-color:#${color}`)
+						else
+							li.filter-color__item(style=`background-color:#${color}`)
+		.filter__buttons
+			button.btn.btn--contour-gray Сброс
+			button.btn.btn--bg-orange Подбор

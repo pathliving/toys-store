@@ -5,8 +5,33 @@
 .products-prev__wrapper {
   display: flex;
   flex-wrap: wrap;
+  &.products-prev__wrapper {
+    &--small {
+      & > * {
+        min-width: 29%;
+        max-width: calc(34% - 30px);
+        @media screen and (max-width: $phone-size) {
+          flex: 0 0 100%;
+          margin-right: 0;
+          max-width: 100%;
+        }
+        &:nth-child(4n + 4) {
+          margin-right: 30px;
+          @media screen and (max-width: $phone-size) {
+            margin-right: 0;
+          }
+        }
+        &:nth-child(3n + 3) {
+          margin-right: 0;
+          @media screen and (max-width: $tablet-size) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
   & > * {
-    flex: 1;
+    flex: auto;
     margin-right: 30px;
     margin-bottom: 30px;
     min-width: 20%;
@@ -24,6 +49,9 @@
       margin-right: 0;
       @media screen and (max-width: $tablet-size) {
         margin-right: 30px;
+      }
+      @media screen and (max-width: $phone-size) {
+        margin-right: 0;
       }
     }
     &:nth-child(3n + 3) {

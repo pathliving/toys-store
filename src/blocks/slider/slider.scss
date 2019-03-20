@@ -1,0 +1,71 @@
+.category-slider {
+  background-color: $athens-gray;
+  border-radius: 4px;
+  padding: 0 0 20px;
+  margin-bottom: 20px;
+  &__header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  &__body {
+    .slick-track {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  &__title {
+    background-color: rgba(52, 59, 76, 0.5);
+    border-radius: 0 0 4px 4px;
+    color: $white;
+    font-family: "VAGRounded", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: $base-font-size + 3px;
+    line-height: 1.58;
+    padding: 10px 20px;
+    text-align: center; 
+  }
+  &__item {
+    font-size: $base-font-size - 4px;
+    margin: 0 10px;
+    outline: none;
+    padding: 0 10px;
+    text-align: center;
+  }
+  &__icon {
+    @include size(30px);
+    display: block;
+    fill: $blaze-orange;
+    margin: 0 auto 15px;
+  }
+  &__dots {
+    bottom: -20px;
+    display: none;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    @media screen and (max-width: $tablet-size) {
+      display: flex;
+    }
+    .slick-dots {
+      align-items: center;
+      display: flex;
+      & > * {
+        margin-right: 10px;
+        &:last-child { margin-right: 0; }
+      }
+      li {
+        &.slick-active {
+          .category-slider__dot {
+            background-color: $blaze-orange;
+          }
+        }
+      }
+    }
+  }
+  &__dot {
+    @include size(10px);
+    background-color: $alto;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}

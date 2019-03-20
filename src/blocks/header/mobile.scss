@@ -28,13 +28,13 @@
 	@media screen and (max-width: $tablet-size) {
 		display: block;
 	}
-	.search {
-		display: none;
-		@media screen and (max-width: $tablet-size) {
-			display: block;
-		}
-		@media screen and (max-width: $phone-size) {
-			display: none;
-		}
-	}
+	// .search {
+	// 	display: none;
+	// 	@media screen and (max-width: $phone-size) {
+	// 		display: none;
+	// 	}
+	// 	@media screen and (max-width: $tablet-size) {
+	// 		display: block;
+	// 	}
+	// }
 }
