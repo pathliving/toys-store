@@ -4,7 +4,7 @@
     line-height: 1.79;
     margin-bottom: 15px;
     @media screen and (max-width: $phone-size) {
-      font-size: $base-font-size - 4px;
+      font-size: $base-font-size - 4px !important;
     }
   }
   &__author {

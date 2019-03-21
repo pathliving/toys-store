@@ -13,10 +13,12 @@
 		padding: 20px 40px;
 	}
 	@media screen and (max-width: $phone-size) {
-		align-items: flex-start;
-		flex-direction: column;
-		padding: 20px;
-		justify-content: flex-start;
+		align-items: center;
+		padding: 20px 0 !important;
+		// justify-content: flex-start;
+	}
+	@media screen and (max-width: $phone-size-small) {		
+		flex-direction: column !important;
 	}
 }
 .advantage {
@@ -59,6 +61,9 @@
 	&__title {
 		font-size: $base-font-size + 2px;
 		margin-bottom: 5px;
+		@media screen and (max-width: $phone-size) {
+			font-size: $base-font-size - 1px;
+		}
 	}
 	&__descr {
 		color: $mid-gray;

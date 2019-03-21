@@ -1,72 +1,146 @@
 .filter {
-  & > * {
-    margin: 20px 0;
-    &:first-child { margin-top: 0; }
-    &:last-child { margin-bottom: 0; }
-  }
-  &__block {
-    border-radius: 2px;
-    border: 1px solid $alto;
-    padding: 20px;
-    & > * {
-      margin: 10px 0;
-      &:first-child { margin-top: 0; }
-      &::last-child { margin-bottom: 0; }
-    }
-  }
-  &__title {
-    color: $blaze-orange;
-    display: block;
-    font-weight: 700;
-    line-height: 2.14;
-    margin-bottom: 10px;
-  }
-  &__buttons {
-    display: flex;
-    & > * {
-      flex: 1;
-      margin-right: 15px;
-      &:last-child { margin-right: 0; }
-    }
-  }
-  &__label {
-    color: $tundora;
-    display: block;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
-  &-list {
-    &__item {
-      margin-bottom: 10px;
-      &:last-child { margin-bottom: 0; }
-    }
-    &__link {
-      color: $tundora;
-      font-size: $base-font-size - 2px;
-      font-weight: 600;
-      &:hover {
-        color: $oslo-gray;
-      }
-    }
-  }
-  &-color {
-    &__list {
-      display: flex;
-      flex-wrap: wrap;
-      & > * {
-        margin-right: 10px;
-        margin-bottom: 10px;
-      }
-    }
-    &__item {
-      @include size(20px);
-      border-radius: 2px;
-      cursor: pointer;
-      display: block;
-      outline: none;
-      &.filter-color__item--white {
-        border: 1px solid $alto;
-      }
-    }
-  }
+	background-color: $white;
+	position: relative;
+	&.filter--open {
+		@media screen and (max-width: $tablet-size) {
+			display: block;
+		}
+	}
+	@media screen and (max-width: $tablet-size) {
+		box-shadow: 0 5px 30px 0 rgba(75, 75, 75, 0.5);
+		left: -1px;
+		display: none;
+		position: absolute;
+		top: 0;
+		z-index: 5;
+	}
+	@media screen and (max-width: $phone-size) {
+		top: 55px;
+	}
+	&__body {
+		& > * {
+			margin: 20px 0;
+			&:first-child { margin-top: 0; }
+			&:last-child { margin-bottom: 0; }
+		}
+	}
+	&__block {
+		border-radius: 2px;
+		border: 1px solid $alto;
+		padding: 20px;
+		& > * {
+			margin: 10px 0;
+			&:first-child { margin-top: 0; }
+			&:last-child { margin-bottom: 0; }
+		}
+	}
+	&__title {
+		color: $blaze-orange;
+		display: block;
+		font-weight: 700;
+		line-height: 2.14;
+		margin-bottom: 10px;
+	}
+	&__buttons {
+		display: flex;
+		& > * {
+			flex: 1;
+			margin-right: 15px;
+			&:last-child { margin-right: 0; }
+		}
+	}
+	&__label {
+		color: $tundora;
+		display: block;
+		font-weight: 700;
+		margin-bottom: 10px;
+	}
+	&-list {
+		&__item {
+			margin-bottom: 10px;
+			&:last-child { margin-bottom: 0; }
+		}
+		&__link {
+			color: $tundora;
+			font-size: $base-font-size - 2px;
+			font-weight: 600;
+			&:hover {
+				color: $oslo-gray;
+			}
+		}
+	}
+	&-color {
+		&__list {
+			display: flex;
+			flex-wrap: wrap;
+			& > * {
+				margin-right: 10px;
+				margin-bottom: 10px;
+			}
+		}
+		&__item {
+			@include size(20px);
+			border-radius: 2px;
+			cursor: pointer;
+			display: block;
+			outline: none;
+			&.filter-color__item--white {
+				border: 1px solid $alto;
+			}
+		}
+	}
+	&-mobile {
+		&__toggle {
+			align-items: center;
+			border: 1px solid $alto;
+			border-radius: 2px;
+			cursor: pointer;
+			display: none;
+			line-height: 38px;
+			margin-left: 20px;
+			height: 40px;
+			padding: 0 15px;
+			@media screen and (max-width: $tablet-size) {
+				display: flex;
+				font-size: $base-font-size - 4px;
+				margin-left: auto;
+				margin-right: 10px;
+				margin-top: 5px;
+			}
+			@media screen and (max-width: $phone-size) {
+				margin-left: 0 !important;
+				margin-right: 10px;
+			}
+			@media screen and (max-width: 550px) {
+				margin-right: auto !important;
+			}
+			& > * {
+				margin-right: 10px;
+				&:last-child { margin-right: 0; }
+			}
+			&-icon {
+				@include size(12px);
+				fill: $blaze-orange;
+			}
+		}
+		&__close {
+			@include size(40px);
+			align-items: center;
+			background-color: $blaze-orange;
+			cursor: pointer;
+			display: none;
+			justify-content: center;
+			left: 100%;
+			position: absolute;
+			top: 0;
+			z-index: 1;
+			@media screen and (max-width: $tablet-size) {
+				display: flex;
+			}
+			&-icon {
+				@include size(18px);
+				fill: $white;
+			}
+		}
+	}
 }

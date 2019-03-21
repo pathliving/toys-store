@@ -22,6 +22,9 @@
 		font-size: $base-font-size - 4px;
 		height: 40px;
 		padding: 0 15px;
+		@media screen and (max-width: $phone-size) {
+			margin-top: 5px;
+		}
 		& > * {
 			margin-right: 10px;
 			&:last-child { margin-right: 0; }

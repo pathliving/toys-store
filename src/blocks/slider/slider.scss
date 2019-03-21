@@ -46,6 +46,9 @@
     @media screen and (max-width: $tablet-size) {
       display: flex;
     }
+    @media screen and (max-width: $phone-size) {
+      margin-bottom: 2px;
+    }
     .slick-dots {
       align-items: center;
       display: flex;

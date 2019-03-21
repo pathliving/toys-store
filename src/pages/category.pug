@@ -36,6 +36,9 @@ block content
 		.category
 			.category__header
 				h1.title-page Беговелы
+				.filter-mobile__toggle
+					span Фильтры
+					+icon('chevron-right', 'filter-mobile__toggle-icon')
 				.category__sort
 					.select
 						.select__header.select__header--multi
@@ -49,6 +52,8 @@ block content
 								li.select-list__item новизне
 			.category__body
 				aside.filter.category__filter
+					.filter-mobile__close
+						+icon('chevron-left', 'filter-mobile__close-icon')
 					+filter()
 				main.category-main
 					section.s-category-main
@@ -87,7 +92,7 @@ block content
 												li.select-list__item 12
 												li.select-list__item 24
 												li.select-list__item 36
-					section.s-content
+					section.s-content.category__content
 						.container
 							.content-block
 								p.text-attention Интернет-магазин Baby-Toys занимается продажей зимнего и летнего транспорта для детей и их родителей. Компания работает на рынке уже больше 15 лет. За это время мы составили уникальный ассортимент товаров на любой вкус и кошелек. От классических велосипедов и санок до оригинальных беговелов и приобретающих все большую популярность снегокатов!

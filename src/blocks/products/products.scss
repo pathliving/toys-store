@@ -28,8 +28,11 @@
           }
         }
       }
+      .slick-track {
+        display: flex;
+      }
     }
-  }
+  }  
   & > * {
     flex: auto;
     margin-right: 30px;

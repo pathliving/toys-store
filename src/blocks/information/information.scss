@@ -16,7 +16,7 @@
 		flex-wrap: wrap;
 	}
 	@media screen and (max-width: $phone-size) {
-		flex-direction: column;
+		flex-direction: column !important;
 	}
 	& > * {
 		flex: 1;
@@ -26,8 +26,8 @@
 			width: 50%;
 		}
 		@media screen and (max-width: $phone-size) {
-			flex: 1;
-			width: 100%;
+			flex: 1 !important;
+			width: 100% !important;
 		}
 		&:last-child { padding-right: 0; }
 	}
@@ -38,8 +38,8 @@
 		&__body {
 			height: 250px;
 			@media screen and (max-width: $phone-size) {
-				height: auto;
-				margin-bottom: 20px;
+				height: auto !important;
+				margin-bottom: 20px !important;
 			}
 		}
 		&__link {
@@ -70,8 +70,8 @@
 						height: auto;
 					}
 					@media screen and (max-width: $phone-size) {
-						height: auto;
-						margin-bottom: 20px;
+						height: auto !important;
+						margin-bottom: 20px !important;
 					}
 				}
 			}

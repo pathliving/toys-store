@@ -17,6 +17,9 @@
 				&:last-child { margin-bottom: 0; }
 			}
 		}
+		&__body {
+			margin-bottom: 15px;
+		}
 		&__request {
 			background-color: $athens-gray;
 			border-radius: 4px;

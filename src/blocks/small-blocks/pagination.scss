@@ -48,6 +48,9 @@
     position: absolute;
     right: 0;
     top: 0;
+    @media screen and (max-width: $phone-size) {
+			display: none;
+		}
     & > * {
       margin-right: 10px;
       &:last-child { margin-right: 0; }

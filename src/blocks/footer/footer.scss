@@ -11,7 +11,7 @@
 			padding: 40px 0 0 0;
 		}
 		@media screen and (max-width: $phone-size) {
-			padding: 30px 0;
+			padding: 30px 0 !important;
 		}
 		.container {
 			align-items: flex-start;
@@ -32,46 +32,46 @@
 			width: 226px;
 		}
 		@media screen and (max-width: $phone-size) {
-			flex: 0 0 46%;
-			font-size: $base-font-size - 4px;
-			width: 46%;
-			margin-bottom: 20px;
-			max-width: 100%;
+			flex: 0 0 46% !important;
+			font-size: $base-font-size - 4px !important;
+			width: 46% !important;
+			margin-bottom: 20px !important;
+			max-width: 100% !important;
 		}
 		&:last-child {
 			margin-right: 0;
 			@media screen and (max-width: $phone-size) {
-				margin-bottom: 0;
+				margin-bottom: 0 !important;
 			}
 		}
 		&.footer__item {
 			&--wide {
 				@media screen and (max-width: $phone-size) {
-					flex: 1;
-					flex-direction: row;
-					width: 100%;
-					justify-content: space-between;
+					flex: 1 !important;
+					flex-direction: row !important;
+					width: 100% !important;
+					justify-content: space-between !important;
 				}
 				& > * {
 					@media screen and (max-width: $phone-size) {
-						flex: 0 0 45%;
-						width: 45%;
-						margin: 0;
+						flex: 0 0 45% !important;
+						width: 45% !important;
+						margin: 0 !important;
 					}
 				}
 			}
 			&--full {
 				@media screen and (max-width: $phone-size) {
-					flex: 1;
-					flex-direction: row;
-					width: 100%;
+					flex: 1 !important;
+					flex-direction: row !important;
+					width: 100% !important;
 				}
 			}
 		}
 		& > * {
 			margin: 15px 0;
 			@media screen and (max-width: $phone-size) {
-				margin: 5px 0;
+				margin: 5px 0 !important;
 			}
 			&:first-child { margin-top: 0; }
 			&::last-child { margin-bottom: 0; }
@@ -84,7 +84,7 @@
 			padding: 0 0 30px 0;
 		}
 		@media screen and (max-width: $phone-size) {
-			width: 100%;
+			width: 100% !important;
 		}
 		.facebook {
 			@media screen and (max-width: $tablet-size) {
@@ -104,24 +104,24 @@
 			display: flex;
 			justify-content: space-between;
 			@media screen and (max-width: $phone-size) {
-				align-items: center;
-				flex-direction: column;
-				text-align: center;
+				align-items: center !important;
+				flex-direction: column !important;
+				text-align: center !important;
 			}
 			@media screen and (max-width: $tablet-size) {
 				font-size: $base-font-size - 4px;
 				line-height: 1.67;
-			}	
-			/* & > * {
+			}
+			& > * {
 				@media screen and (max-width: $phone-size) {
-					flex: 1;
-					width: 100%;
+					flex: 1 !important;
+					width: 100% !important;
 				}
 				@media screen and (max-width: $tablet-size) {
 					flex: 0 0 45%;
 					width: 45%;
 				}
-			} */
+			}
 		}
 	}
 	&__personal-data {
@@ -135,9 +135,10 @@
 		}
 		@media screen and (max-width: $phone-size) {
 			flex: auto !important;
-			margin-left: 0px;
+			margin: 0 !important;
+			margin-left: 0px !important;
 			margin-top: 10px !important;
-			text-align: center;margin: 0;
+			text-align: center !important;
 			width: 100% !important;
 		}
 	}
@@ -152,7 +153,7 @@
 			justify-content: space-between;
 			width: 100%;
 			@media screen and (max-width: $phone-size) {
-				flex-wrap: wrap;
+				flex-wrap: wrap !important;
 			}
 			@media screen and (max-width: $tablet-size) {
 				display: flex;
@@ -174,7 +175,7 @@
 		font-size: $base-font-size + 4px;
 		font-weight: 600;
 		@media screen and (max-width: $phone-size) {
-			font-size: $base-font-size;
+			font-size: $base-font-size !important;
 		}
 	}
 	&__mail {
@@ -192,7 +193,7 @@
 		display: flex;
 		margin-bottom: 30px;
 		@media screen and (max-width: $phone-size) {
-			flex-wrap: wrap;
+			flex-wrap: wrap !important;
 		}
 		@media screen and (max-width: $tablet-size) {
 			flex: 1;
@@ -204,7 +205,7 @@
 		&-phone {
 			font-size: $base-font-size;
 			@media screen and (max-width: $phone-size) {
-				font-size: $base-font-size - 2px;
+				font-size: $base-font-size - 2px !important;
 			}
 		}
 	}
@@ -226,7 +227,7 @@
 	align-items: center;
 	display: flex;
 	@media screen and (max-width: $phone-size) {
-		justify-content: center;
+		justify-content: center !important;
 	}
 	@media screen and (max-width: $tablet-size) {
 		width: 100%;
@@ -255,15 +256,15 @@
 		font-weight: 300;
 		& > * {
 			margin-right: 15px;
-			@media screen and (max-width: $phone-size) {
-				margin-right: 0;
-			}
+			// @media screen and (max-width: $phone-size) {
+			// 	margin-right: 0;
+			// }
 			&:last-child { margin-right: 0; }
 		}
 	}
 	&__name {
 		@media screen and (max-width: $phone-size) {
-			display: none;
+			display: none !important;
 		}
 	}
 }
@@ -273,10 +274,10 @@
 	display: flex;
 	margin-left: auto;
 	@media screen and (max-width: $phone-size) {
-		align-items: center;
-		flex-direction: row;
-		align-items: center;
-		width: 100%;
+		align-items: center !important;
+		flex-direction: row !important;
+		align-items: center !important;
+		width: 100% !important;
 	}
 	@media screen and (max-width: $tablet-size) {
 		align-items: flex-start;
@@ -286,7 +287,7 @@
 	& > * {
 		margin-right: 20px;
 		@media screen and (max-width: $phone-size) {
-			margin-right: 15px;
+			margin-right: 15px !important;
 		}
 		@media screen and (max-width: $tablet-size) {
 			margin-right: 0;
