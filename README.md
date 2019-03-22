@@ -22,3 +22,25 @@ How to start
 
 
     or click on this [link](http://localhost:8080)
+
+Example
+---
+
+<img src="example/index.png" width="900">
+
+Built with
+---
+
+* [PUG](https://pugjs.org/api/getting-started.html)
+* [SASS](https://sass-lang.com/)
+* [jQuery](http://api.jquery.com/) 
+* [Gulp](https://gulpjs.com/) 
+* [Git](https://git-scm.com/) 
+* [svg4everybody](https://github.com/jonathantneal/svg4everybody) 
+
+Links
+---
+
+This project was using [GitHub Pages](https://pages.github.com/)
+
+And [Gulp](https://github.com/nicothin/NTH-start-project) starter
