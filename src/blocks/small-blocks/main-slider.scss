@@ -1,0 +1,61 @@
+.product {
+	&-slider {
+		margin-right: 15px;
+		padding-left: 100px;
+		position: relative;
+		overflow: hidden;
+		@media screen and (max-width: $phone-size) {
+			padding-left: 0 !important;
+			margin-right: 0 !important;
+		}
+		&__img {
+			height: auto;
+			margin: 0 auto;
+			max-height: 100%;
+			max-width: 100%;
+			&-wrapper {
+				outline: none;
+			}
+		}
+	}
+	&-slider-dots {
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 65px;
+		@media screen and (max-width: $phone-size) {
+			display: none !important;
+		}
+		&__btn {
+			@include size(65px);
+			align-items: center;
+			cursor: pointer;
+			display: flex;
+			justify-content: center;
+			&-icon {
+				@include size(30px);
+				fill: $alto;
+			}
+		}
+		&__item {
+			@include size(65px);
+			border: 2px solid transparent;
+			border-radius: 2px;
+			cursor: pointer;
+			margin-bottom: 10px; 
+			outline: none;
+			&.slick-current {
+				border: 1px solid $blaze-orange !important;
+			}
+		}
+		&__img {
+			height: auto;
+			max-height: 100%;
+			max-width: 100%;
+		}
+	}
+}
+
+.s-slider {
+	outline: none;
+}

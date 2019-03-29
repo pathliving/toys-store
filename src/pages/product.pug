@@ -1,0 +1,101 @@
+extends ../pug/layout.pug
+
+include ../blocks/header/header
+include ../blocks/footer/footer
+include ../blocks/products/prev-1
+include ../blocks/products/prev-2
+include ../blocks/products/prev-3
+include ../blocks/products/prev-4
+include ../blocks/small-blocks/icon
+include ../blocks/filter/filter
+include ../blocks/advantages/advantages
+include ../blocks/products/tabs/tab1
+include ../blocks/products/tabs/tab2
+include ../blocks/products/tabs/tab3
+include ../blocks/products/product-slider
+include ../blocks/products/product-info
+
+block meta
+	title Беговелы Puky Pukylino
+	meta(name='description', content='')
+
+block append head
+	link(rel='stylesheet', href='css/style.css')
+	link(rel='stylesheet', href='css/slick.css')
+
+block header
+	+header()
+
+block content
+	.container
+		.breadcrumbs
+			ul.breadcrumbs__list
+				li.breadcrumbs__item
+					a(href='index.html').breadcrumbs__link Главная
+				li.breadcrumbs__item
+					a(href='category.html').breadcrumbs__link Каталог
+				li.breadcrumbs__item
+					a(href='category.html').breadcrumbs__link Беговелы
+				li.breadcrumbs__item
+					span.breadcrumbs__current Беговелы Puky
+	section.s-product
+		.container
+			.product
+				.product__header
+					+product-slider()
+					+product-info()
+				.product__body
+					.product-details.tabs
+						.mobile-scroll-wrapper
+							.mobile-scroll-inner
+								ul.tabs-navigation.product-details-navigation
+									li(show-tab='tab-description').product-details-navigation__item.tabs-navigation__item.tabs-navigation__item--active Описание
+									li(show-tab='tab-characteristics').product-details-navigation__item.tabs-navigation__item Характеристики
+									li(show-tab='tab-reviews').product-details-navigation__item.tabs-navigation__item
+										span Отзывы
+										span.product-details-navigation__count 3
+									li.product-details-navigation__item.tabs-navigation__item
+										a(href='#l-sam-goods').scroll-link Похожие товары
+						.tabs__body.product-details__body
+							.tab.tab--active.tab-description
+								+tab1()
+							.tab.tab-characteristics
+								+tab2()
+							.tab.tab-reviews
+								+tab3()
+	+advantages()
+	section.s-slider#l-sam-goods
+		.container
+			.products-border-line-slider
+				.products-border-line-slider__header
+					h2.title-section Похожие товары
+					.products-border-line-slider__navigation
+						.products-border-line-slider__btn.products-border-line-slider__btn--prev
+							+icon('chevron-left', 'products-border-line-slider__icon')
+						.products-border-line-slider__btn.products-border-line-slider__btn--next
+							+icon('chevron-right', 'products-border-line-slider__icon')
+				.products-border-line-slider__body
+					.js-products-border-line-slider
+						+prev-4()
+						+prev-3()
+						+prev-1()
+						+prev-2()
+			section.s-content.category__content
+				.container
+					.content-block
+						p.text-attention Интернет-магазин Baby-Toys занимается продажей зимнего и летнего транспорта для детей и их родителей. Компания работает на рынке уже больше 15 лет. За это время мы составили уникальный ассортимент товаров на любой вкус и кошелек. От классических велосипедов и санок до оригинальных беговелов и приобретающих все большую популярность снегокатов!
+						h3.title-block Беговелы для детей
+						p.text Активный отдых — важная составляющая жизни современного человека. Совместные прогулки с детьми, катание на самокате или коньках повышает настроение, развивает силу и ловкость и способствует дружескому общению. Мы прекрасно понимаем это, поэтому предлагаем лучшие транспортные средства ведущих мировых производителей. Самые яркие, удобные, надежные и безопасные.
+						p.text В каталог не попадают «случайные» товары. Мы сотрудничаем с известными во всем мире производителями, тщательно анализируем рынок и выставляем на продажу скейты, ролики, самокаты, беговелы, санки и снегокаты, завоевавшие положительные отклики у покупателей.
+						p.text Модели изготавливаются из высококачественных нетоксичных материалов по передовым технологиям. Они функциональны, удобны и безопасны. Готовая продукция имеет устойчивую конструкцию. Но главное — многочисленные восторженные отзывы ездоков и их родителей — тех, кто уже успел опробовать транспорт на собственном опыте. Все товары сертифицированы, на них предоставляется гарантия с возможностью обслуживания в сервисном центре.
+						h3.title-block Купить беговелы в Киеве
+						p.text Задать вопросы о покупке можно прямо на сайте — через онлайн-форму внизу окна. Кроме того, специалисты готовы дать консультацию по телефонному номеру (044) 145-30-30. Также можно заказать обратный звонок, указав в комментарии удобное время для общения со специалистом.
+						p.text Тех, кто считает, что лучше «один раз увидеть», мы приглашаем на наш склад.
+
+block footer
+	+footer()
+
+block page-bottom
+	script(src='js/jquery.min.js')
+	script(src='js/slick.min.js')
+	script(src='js/bundle.js')

@@ -1,0 +1,67 @@
+include ../small-blocks/icon
+
+mixin product-info()
+
+	.product-info
+		.product-info__header
+			h1.title-page Беговел Puky Pukylino
+			img(src='img/puky.jpg' alt='Логотип бренда').product-info__logo
+		.product-info__body
+			.product-info__row
+				.product-rating
+					.product-rating__stars
+						+icon('star','product-rating__icon product-rating__icon--active')
+						+icon('star','product-rating__icon product-rating__icon--active')
+						+icon('star','product-rating__icon product-rating__icon--active')
+						+icon('star','product-rating__icon product-rating__icon--active')
+						+icon('star','product-rating__icon')
+					a(href='').product-rating__count 3 отзыва
+				.product-info__sku
+					span.product__text Артикул: <b>3015</b>
+			.product-info__row
+				.product-color
+					span.product__text Выберите цвет
+					ul.color-list
+						li.color-list__item.color-list__item--active(style=`background-color:#ff5ec9`)
+						li.color-list__item(style=`background-color:#7ed321`)
+						li.color-list__item(style=`background-color:#f5a623`)
+				.product-available
+					span.product__text Наличие:
+					.product-available-view
+						each i in [1,2,3,4,5]
+							.product-available-view__item
+			.product-info__row
+				.product-price
+					span.product-price__old 4 990 грн.
+					span.product-price__current 3 990 грн.
+					a(href='').product-info__link Нашли дешевле?
+				.product-actions
+					button.btn.btn--big.btn--bg-orange Купить
+					button.btn.btn--contour-gray.btn--big Купить в 1 клик
+		.product-info__footer
+			.product-info-advantages
+				.product-info-advantage
+					.product-info-advantage__header
+						+icon('pay','product-info-advantage__icon')
+						span.product-info-advantage__title Оплата
+					.product-info-advantage__body
+						ul.product-list.product-list--advantage
+							each item in ['Наличные', 'Электронные деньги', 'Приват24', 'Безналичная оплата']
+								li.product-list__item=item
+				.product-info-advantage
+					.product-info-advantage__header
+						+icon('fast-delivery','product-info-advantage__icon')
+						span.product-info-advantage__title Доставка
+					.product-info-advantage__body
+						ul.product-list.product-list--advantage
+							li.product-list__item По Киеву сегодня курьером - <b>бесплатно</b>
+							li.product-list__item Cамовывозом из магазина - <b>бесплатно</b>
+				.product-info-advantage
+					.product-info-advantage__header
+						+icon('map','product-info-advantage__icon')
+						span.product-info-advantage__title Оплата
+					.product-info-advantage__body
+						ul.product-list.product-list--advantage
+							li.product-list__item Украина, г.Киев, проспект Андропова, д.11, пав. №1/2
+							li.product-list__item
+								a(href='https://www.google.com/maps').item__google-maps Google карты

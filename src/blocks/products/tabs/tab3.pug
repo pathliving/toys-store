@@ -1,0 +1,53 @@
+mixin reviewRow(label,value)
+	.review__row
+		span.review__label=label
+		span.review__value=value
+
+mixin tab3()
+
+	.reviews
+		.reviews__header
+			h2.title-section Отзывы
+			.product-rating
+				.product-rating__stars
+					+icon('star','product-rating__icon product-rating__icon--active')
+					+icon('star','product-rating__icon product-rating__icon--active')
+					+icon('star','product-rating__icon product-rating__icon--active')
+					+icon('star','product-rating__icon product-rating__icon--active')
+					+icon('star','product-rating__icon')
+				span.product__text 4.0 балла на основе 3 оценок
+			a(href='').btn.btn--bg-orange.review__add.btn--inline Оставить отзыв
+		.reviews__body
+			.review
+				.review__header
+					.review-author__photo-wrapper
+						span.review-author__photo-text ДС
+					.review-author__info
+						span.review-author__name Диана Старикова
+						span.review-author__mark Оценка: 5
+				.review__body
+					+reviewRow('Достоинства', 'Хороший беговел')
+					+reviewRow('Недостатки', 'Нет')
+					+reviewRow('Комментарий', 'У меня два мальчика и оба в восторге от беговелов. Безопасны и устойчивы')
+			.review
+				.review__header
+					.review-author__photo-wrapper
+						span.review-author__photo-text Е
+					.review-author__info
+						span.review-author__name Елена
+						span.review-author__mark Оценка: 3
+				.review__body
+					+reviewRow('Достоинства', 'Неплохой беговел')
+					+reviewRow('Недостатки', 'Сломался через месяц')
+					+reviewRow('Комментарий', 'Пришлось сдать в сервисный центр')
+			.review
+				.review__header
+					.review-author__photo-wrapper
+						span.review-author__photo-text П
+					.review-author__info
+						span.review-author__name Павел
+						span.review-author__mark Оценка: 4
+				.review__body
+					+reviewRow('Достоинства', 'Нормальный детский велик')
+					+reviewRow('Недостатки', 'Не обнаружил')
+					+reviewRow('Комментарий', 'Довольно устойчивый и приятно выглядит. Без излишеств')
