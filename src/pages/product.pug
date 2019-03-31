@@ -16,12 +16,13 @@ include ../blocks/products/product-slider
 include ../blocks/products/product-info
 
 block meta
-	title Беговелы Puky Pukylino
+	title Беговел Puky Pukylino
 	meta(name='description', content='')
 
 block append head
 	link(rel='stylesheet', href='css/style.css')
 	link(rel='stylesheet', href='css/slick.css')
+	link(rel='stylesheet', href='css/magnific-popup.css')
 
 block header
 	+header()
@@ -37,7 +38,7 @@ block content
 				li.breadcrumbs__item
 					a(href='category.html').breadcrumbs__link Беговелы
 				li.breadcrumbs__item
-					span.breadcrumbs__current Беговелы Puky
+					span.breadcrumbs__current Беговел Puky Pukylino
 	section.s-product
 		.container
 			.product
@@ -98,4 +99,5 @@ block footer
 block page-bottom
 	script(src='js/jquery.min.js')
 	script(src='js/slick.min.js')
+	script(src='js/jquery.magnific-popup.min.js')
 	script(src='js/bundle.js')

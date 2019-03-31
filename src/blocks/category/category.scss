@@ -3,33 +3,29 @@
 		align-items: center;
 		display: flex;
 		margin-bottom: 20px;
-		@media screen and (max-width: $phone-size) {
-			flex-direction: column;
-		}
-		@media screen and (min-width: 550px) {
-			flex-direction: unset !important;
+		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+			flex-wrap: wrap;
+			vertical-align: middle;
+			width: 100%;
 		}
 		.title-page {
 			margin-bottom: 0;
-			@media screen and (max-width: $phone-size) {
+			@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
 				margin-right: auto;
+				margin-bottom: 5px;
 			}
 		}
 	}
 	&__sort {
 		margin-left: auto;
 		margin-top: 5px;
-		@media screen and (max-width: $tablet-size) {
+		@media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
 			margin-left: 0;
 			margin-right: 0;
 		}
-		@media screen and (max-width: $phone-size) {
-			margin-left: 0;
-			margin-right: auto;
-			margin-top: 0;
-		}
-		@media screen and (max-width: 550px) {
-			margin-right: auto !important;
+		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+			margin-top: -5px;
+			margin-left: auto;
 		}
 	}
 	&__body {
@@ -53,6 +49,9 @@
 
 .s-category {
 	&-slider {
+		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+			display: none;
+		}
 		.container {
 		padding: 0;
 		}
@@ -60,7 +59,7 @@
 	&-main {
 		margin-right: -13px;
 		padding-top: 0;
-		@media screen and (max-width: $phone-size) {
+		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
 			margin-right: 0;
 		}
 	}

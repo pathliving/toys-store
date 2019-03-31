@@ -3,6 +3,7 @@
   &__list {
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
   }
   &__item {
     align-items: center;
@@ -12,6 +13,7 @@
       background-image: url('../img/breadcrumb-arrow.png');
       display: inline-block;
       height: 11px;
+      line-height: 1.5;
       margin: 0 10px;
       width: 16px;
     }

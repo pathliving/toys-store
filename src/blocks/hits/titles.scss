@@ -11,6 +11,9 @@
     font-weight: 600;
     line-height: 1.67;
     margin-bottom: 20px;
+    @media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+			margin-bottom: 0;
+		}
   }
   &-block {
     font-size: $base-font-size + 4px;

@@ -6,47 +6,64 @@
 	background-color: $parcelain;
 }
 
-.s-information {
-	padding: 0px 0 50px 0;
-}
-
 .information {
 	display: flex;
-	@media screen and (max-width: $tablet-size) {
+	@media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
 		flex-wrap: wrap;
 	}
-	@media screen and (max-width: $phone-size) {
-		flex-direction: column !important;
+	@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+		flex-direction: column;
 	}
 	& > * {
 		flex: 1;
 		padding-right: 30px;
-		@media screen and (max-width: $tablet-size) {
+		@media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
 			flex: 0 0 50%;
 			width: 50%;
 		}
-		@media screen and (max-width: $phone-size) {
-			flex: 1 !important;
-			width: 100% !important;
+		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+			flex: 1;
+			width: 100%;
 		}
 		&:last-child { padding-right: 0; }
 	}
 	&-item {
 		&__header {
-			margin-top: 30px;			
+			margin-top: 30px;
 		}
 		&__body {
-			height: 250px;
-			@media screen and (max-width: $phone-size) {
-				height: auto !important;
-				margin-bottom: 20px !important;
+			height: auto;
+			@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+				height: auto;
+				margin-bottom: 0;
 			}
 		}
 		&__link {
 			color: $mine-shaft;
 			border-bottom: 1px solid rgba(38, 38, 38, 0.15);
 			display: inline-block;
-			font-size: $base-font-size - 2px;   
+			font-size: $base-font-size - 2px;
+			&-news {
+				margin-top: 41px;
+				@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+					margin-top: 30px;
+				}
+			}
+			&-reviews {
+				margin-top: 30px;
+			}
+			&-brands {
+				margin-top: 10px;
+				@media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+					margin-top: 0;
+				}
+			}
+			&-count {
+				margin-top: 10px;
+				@media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+					margin-top: 0;
+				}
+			}
 		}
 		&__count {
 			color: $chelsea-cucumber;
@@ -60,21 +77,14 @@
 			}
 		}
 		&.information-item--wide {
-			@media screen and (max-width: $tablet-size) {
+			@media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
 				flex: 1;
 				width: 100%;
 			}
-			.information-item {
-				&__body {
-					@media screen and (max-width: $tablet-size) {
-						height: auto;
-					}
-					@media screen and (max-width: $phone-size) {
-						height: auto !important;
-						margin-bottom: 20px !important;
-					}
-				}
-			}
 		}
 	}
+}
+
+.s-information {
+	padding: 0px 0 42px 0;
 }

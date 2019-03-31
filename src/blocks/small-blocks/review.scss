@@ -3,19 +3,19 @@
 		align-items: center;
 		display: flex;
 		padding-bottom: 20px;
-		@media screen and (max-width: $phone-size) {
+		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
 			align-items: flex-start;
 			flex-direction: column;
 		}
 		& > * {
 			margin-right: 20px;
-			@media screen and (max-width: $phone-size) {
+			@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
 				margin-bottom: 15px;
 				margin-right: 0;
 			}
 			&:last-child {
 				margin-right: 0;
-				@media screen and (max-width: $phone-size) {
+				@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
 					margin-bottom: 0;
 				}
 			}
@@ -50,7 +50,7 @@
 	}
 	&__add {
 		margin-left: auto;
-		@media screen and (max-width: $phone-size) {
+		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
 			margin-left: 0;
 		}
 	}	

@@ -1,18 +1,19 @@
 .btn {
 	background-color: $white;
 	border: 1px solid $blaze-orange;
-	border-radius: 2px;
+	border-radius: 4px;
 	color: $blaze-orange;
 	cursor: pointer;
 	display: block;
 	font-size: $base-font-size - 3px;
 	font-weight: 600;
-	line-height: 38px;
+	line-height: 37px;
 	height: 40px;
 	text-align: center;
 	padding: 0 20px;
 	transition: all linear .3s;
 	width: 100%;
+	white-space: nowrap;
 	&:hover {
 		background-color: $blaze-orange;
 		color: $white;
@@ -73,9 +74,13 @@
 			height: 30px;
 			line-height: 28px;
 			padding: 0 15px;
-			@media screen and (max-width: $tablet-size) {
-				padding: 0 10px;
+			@media screen and (min-device-width: $phone-size-small) and (max-device-width: $tablet-size) {
+				padding: 0 8px;
 			}
+		}
+		&--big {
+			line-height: 48px;
+			height: 50px;
 		}
 	}
 }

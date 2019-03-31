@@ -1,17 +1,17 @@
 .header__mobile {
 	display: none;	
 	position: relative;
-	@media screen and (max-width: $phone-size) {
+	@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
 		display: block;
 	}
-	@media screen and (max-width: $phone-size) {
+	@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
 		box-shadow: 0 1px 3px 0 rgba(38, 38, 38, 0.5), inset 0 -1px 0 0 #eef2f4;
 		z-index: 5;
 	}
 	.container {
 		display: flex;
 		justify-content: space-between;
-		@media screen and (max-width: $phone-size) {
+		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
 			align-items: center;
 			justify-content: flex-start;
 			padding: 0;
@@ -19,22 +19,13 @@
 		& > * {
 			flex: 0 0 48%;
 			width: 48%;
-			@media screen and (max-width: $phone-size) {
+			@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
 				flex: 0 0 auto;
 				width: auto;
 			}
 		}
 	}
-	@media screen and (max-width: $tablet-size) {
+	@media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
 		display: block;
 	}
-	// .search {
-	// 	display: none;
-	// 	@media screen and (max-width: $phone-size) {
-	// 		display: none;
-	// 	}
-	// 	@media screen and (max-width: $tablet-size) {
-	// 		display: block;
-	// 	}
-	// }
 }

@@ -9,8 +9,8 @@ let config = {
   ],
   "alwaysAddBlocks": [
     "sprite-svg",
-    "sprite-png",
-    "object-fit-polyfill",
+    // "sprite-png",
+    // "object-fit-polyfill",
   ],
   "addStyleBefore": [
     "src/scss/basic.scss",
@@ -34,11 +34,13 @@ let config = {
     "src/fonts/VAGRounded-Lt-Regular.ttf": "fonts/",
     "src/fonts/VAGRounded-Lt-Bold.ttf": "fonts/",
     "src/img/*.{png,svg,jpg,jpeg}": "img/",
+    "node_modules/jquery/dist/jquery.min.js" : "js/",
     "node_modules/slick-carousel/slick/slick.min.js" : "js/",
     "node_modules/slick-carousel/slick/slick.css" : "css/",
-    "node_modules/jquery/dist/jquery.min.js" : "js/"
+    "node_modules/magnific-popup/dist/jquery.magnific-popup.min.js" : "js/",
+    "node_modules/magnific-popup/dist/magnific-popup.css" : "css/",
+    "src/favicon/*.{png,ico,svg,xml,webmanifest}": "img/favicon"
     // "src/img/DSC_*": "img/",
-    // "src/favicon/*.{png,ico,svg,xml,webmanifest}": "img/favicon",
   },
   "dir": {
     "src": "src/",

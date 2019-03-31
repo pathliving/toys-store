@@ -4,9 +4,9 @@
 		padding-left: 100px;
 		position: relative;
 		overflow: hidden;
-		@media screen and (max-width: $phone-size) {
-			padding-left: 0 !important;
-			margin-right: 0 !important;
+		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+			padding-left: 0;
+			margin-right: 0;
 		}
 		&__img {
 			height: auto;
@@ -23,8 +23,8 @@
 		position: absolute;
 		top: 0;
 		width: 65px;
-		@media screen and (max-width: $phone-size) {
-			display: none !important;
+		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+			display: none;
 		}
 		&__btn {
 			@include size(65px);

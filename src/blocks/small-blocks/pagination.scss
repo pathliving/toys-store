@@ -42,13 +42,12 @@
   }
   &__count {
     align-items: center;
-    cursor: pointer;
     display: flex;
     font-size: $base-font-size - 4px;
     position: absolute;
     right: 0;
     top: 0;
-    @media screen and (max-width: $phone-size) {
+    @media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
 			display: none;
 		}
     & > * {

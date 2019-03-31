@@ -40,9 +40,11 @@
 		margin-bottom: 20px;
 	}
 	&__title {
+		color: $tundora;
 		font-size: $base-font-size;
 		font-weight: 600;
 		line-height: 1.43;
+		outline: none;
 	}
 	&__country {
 		font-size: $base-font-size - 2px;
@@ -95,4 +97,68 @@
 		display: flex;
 		flex-wrap: wrap;
 	}
+}
+
+.products-prev__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  &.products-prev__wrapper {
+		cursor: pointer;
+    &--small {
+      & > * {
+        min-width: 29%;
+        max-width: calc(34% - 30px);
+        @media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+          flex: 0 0 100%;
+          margin-right: 0;
+          max-width: 100%;
+        }
+        &:nth-child(4n + 4) {
+          margin-right: 30px;
+          @media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+            margin-right: 0;
+          }
+        }
+        &:nth-child(3n + 3) {
+          margin-right: 0;
+          @media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+            margin-right: 0;
+          }
+        }
+      }
+      .slick-track {
+        display: flex;
+      }
+    }
+  }  
+  & > * {
+    flex: auto;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    min-width: 20%;
+    max-width: calc(26% - 30px);
+    @media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+      min-width: 30%;
+      max-width: calc(34% - 30px);
+    }
+    @media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+      flex: 0 0 100%;
+      margin-right: 0;
+      max-width: 100%;
+    }
+    &:nth-child(4n + 4) {
+      margin-right: 0;
+      @media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+        margin-right: 30px;
+      }
+      @media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+        margin-right: 0;
+      }
+    }
+    &:nth-child(3n + 3) {
+      @media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+        margin-right: 0;
+      }
+    }
+  }
 }

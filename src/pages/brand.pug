@@ -14,6 +14,7 @@ block meta
 block append head
 	link(rel='stylesheet', href='css/style.css')
 	link(rel='stylesheet', href='css/slick.css')
+	link(rel='stylesheet', href='css/magnific-popup.css')
 
 block header
 	+header()
@@ -34,16 +35,18 @@ block content
 					.brand-info
 						.brand-info__tablet
 							.brand__logo
-								img(src='img/puky-brand.jpg' alt='Логотип бренда').brand__img.brand-info__logo
+								a(class='brand-info__link' href='img/puky-brand.jpg')
+									img(src='img/puky-brand.jpg' alt='Логотип бренда').brand__img.brand-info__logo
 						.brand__description
 							p.text Вот уже более 60 лет Puky является одним из лидирующих Европейских производителей, специализируясь на создании транспорта для детей. 
 							p.text Философия бизнеса Puky заключается в приверженности безопасности, качеству, дизайну и эргономики своих разработок для создания идеального транспорта для детей любого возраста. 
 							p.text Продуктовая линейка Puky представлена широким ассортиментом моделей для активного детского отдыха: беговелов, двух и трехколесных велосипедов, самокатов, способствующих развитию физических способностей детей.
 							p.text При минимальном уходе транспорт PUKY послужит еще и младшим братьям и сестрам Вашего ребенка. А когда вырастут и они, его можно будет подарить знакомым или даже продать. 
 						.brand__certificates
-							span.brand__certificates-label Сертификаты соответствия:
+							span.brand__certificates-label Сертификат соответствия:
 							.brand__certificate
-								img(src='img/certificate.jpg' alt='Сертификат').brand__certificate-img
+								a(class='brand-info__link' href='img/certificate.jpg')
+									img(src='img/certificate.jpg' alt='Сертификат').brand__certificate-img
 			section.s-slider
 				.container
 					.products-border-line-slider
@@ -97,4 +100,5 @@ block footer
 block page-bottom
 	script(src='js/jquery.min.js')
 	script(src='js/slick.min.js')
+	script(src='js/jquery.magnific-popup.min.js')
 	script(src='js/bundle.js')

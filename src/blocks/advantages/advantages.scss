@@ -1,5 +1,5 @@
 .s-advantages {
-	padding: 0 0 30px 0;
+	padding-bottom: 15px;
 }
 
 .advantages {
@@ -8,60 +8,64 @@
 	border-radius: 4px;
 	display: flex;
 	padding: 20px;
-	@media screen and (max-width: $tablet-size) {
+	@media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
 		justify-content: space-between;
 		padding: 20px 40px;
 	}
-	@media screen and (max-width: $phone-size) {
+	@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
 		align-items: center;
-		padding: 20px 0 !important;
-		// justify-content: flex-start;
+		display: flex;
+		justify-content: space-between;
+		padding: 20px 20px;
 	}
-	@media screen and (max-width: $phone-size-small) {		
-		flex-direction: column !important;
+	@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phone-size) {		
+		flex-direction: column;
+		padding-top: 30px;
 	}
 }
+
 .advantage {
 	align-items: center;
 	display: flex;
 	margin-right: 190px;
-	@media screen and (max-width: $tablet-size) {
-		flex-direction: column;
-		margin-right: 0;
-		text-align: center;
-	}
-	@media screen and (max-width: $phone-size) {
+	@media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
 		flex-direction: row;
+		margin-right: 0;
+	}
+	@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+		flex-direction: column;
 		text-align: left;
 		margin-bottom: 10px;
+		margin-right: 0;
+	}
+	@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phone-size) {
+		margin-bottom: 30px;
+		&:last-child { margin-bottom: 10px; }
 	}
 	&:last-child {
 		margin-right: 0;
-		@media screen and (max-width: $phone-size) {
-			margin-bottom: 0;
-		}
 	}
 	&__body {
 		display: flex;
 		flex-direction: column;
+		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+			justify-content: space-between;
+			text-align: center;
+		}
 	}
 	&__icon {
 		@include size(40px);
 		fill: $dusty-gray;
 		margin-right: 20px;
-		@media screen and (max-width: $tablet-size) {
+		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
 			margin-right: 0;
-			margin-bottom: 10px;
-		}
-		@media screen and (max-width: $phone-size) {
-			margin-right: 20px;
-			margin-bottom: 0;	
+			margin-bottom: 5px;	
 		}
 	}
 	&__title {
 		font-size: $base-font-size + 2px;
 		margin-bottom: 5px;
-		@media screen and (max-width: $phone-size) {
+		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
 			font-size: $base-font-size - 1px;
 		}
 	}

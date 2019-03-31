@@ -4,11 +4,11 @@
     display: flex;
     margin: 0;
     &-mobile--hide {
-      @media screen and (max-width: $phone-size) {
+      @media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
         display: none;
       }
     }
-    @media screen and (max-width: $phone-size) {
+    @media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
       flex-direction: column;
     }
   }
@@ -23,7 +23,7 @@
     line-height: 48px;
     padding: 0 50px 0 20px;
     width: 100%;
-    @media screen and (max-width: $phone-size) {
+    @media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
       border-radius: 2px;
       border-right: 1px solid $alto;
     }
@@ -34,7 +34,7 @@
       background-color: $white;
       flex: 1;
       position: relative;
-      @media screen and (max-width: $phone-size) {
+      @media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
         margin-bottom: 15px;
         width: 100%;
       }
@@ -51,7 +51,7 @@
     top: 0;
     width: 40px;
     z-index: 1;
-    @media screen and (max-width: $phone-size) {
+    @media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
       display: none;
     }
     &-icon {
@@ -70,7 +70,7 @@
     flex: 0 0 auto;    
     height: 50px;
     padding: 0 15px;
-    @media screen and (max-width: $phone-size) {
+    @media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
       border-radius: 4px;
       width: 100%;
     }
@@ -83,7 +83,7 @@
     right: 0;
     top: -35px;
     width: 550px;
-    @media screen and (max-width: $tablet-size) {
+    @media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
       box-shadow: none;
       display: block;
       padding: 0;

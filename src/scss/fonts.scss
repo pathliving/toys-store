@@ -42,9 +42,9 @@
 @font-face {
     font-family: 'VAGRounded';
     src: local('VAGRounded Lt Regular'), local('VAGRounded-Lt-Regular'),
+    url('../fonts/VAGRounded-Lt-Regular.ttf') format('truetype'),
     url('../fonts/VAGRounded-Lt-Regular.woff2') format('woff2'),
-    url('../fonts/VAGRounded-Lt-Regular.woff') format('woff'),
-    url('../fonts/VAGRounded-Lt-Regular.ttf') format('truetype');
+    url('../fonts/VAGRounded-Lt-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
@@ -52,9 +52,9 @@
 @font-face {
     font-family: 'VAGRounded';
     src: local('VAGRounded Lt Bold'), local('VAGRounded-Lt-Bold'),
+    url('../fonts/VAGRounded-Lt-Bold.ttf') format('truetype'),
     url('../fonts/VAGRounded-Lt-Bold.woff2') format('woff2'),
-    url('../fonts/VAGRounded-Lt-Bold.woff') format('woff'),
-    url('../fonts/VAGRounded-Lt-Bold.ttf') format('truetype');
+    url('../fonts/VAGRounded-Lt-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }

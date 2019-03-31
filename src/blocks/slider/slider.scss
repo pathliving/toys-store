@@ -43,10 +43,10 @@
     justify-content: center;
     position: absolute;
     width: 100%;
-    @media screen and (max-width: $tablet-size) {
+    @media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
       display: flex;
     }
-    @media screen and (max-width: $phone-size) {
+    @media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
       margin-bottom: 2px;
     }
     .slick-dots {

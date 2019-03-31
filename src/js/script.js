@@ -213,9 +213,9 @@ $(document).ready(function () {
 
 	let brandInfo = function () {
 		if (window.innerWidth < 1140 && window.innerWidth > 767) {
-				$('.brand__certificates').appendTo('.brand-info__tablet');
+			$('.brand__certificates').appendTo('.brand-info__tablet');
 		} else {
-				$('.brand__certificates').appendTo('.brand-info');
+			$('.brand__certificates').appendTo('.brand-info');
 		}
 	};
 
@@ -256,12 +256,12 @@ $(document).ready(function () {
 
 	let select = function () {
 		$(document).on('click', '.select__header', function () {
-				$(this).parent().toggleClass('select--open').parent().siblings('.filter__row').find('.select').removeClass('select--open');
+			$(this).parent().toggleClass('select--open').parent().siblings('.filter__row').find('.select').removeClass('select--open');
 		});
 		$(document).on('click', '.select-list__item', function () {
-				let current = $(this).closest('.select').find('.select__current')[0];
-				$(this).closest('.select').removeClass('select--open');
-				$(current).text($(this).text());
+			let current = $(this).closest('.select').find('.select__current')[0];
+			$(current).text($(this).text());
+			$(this).closest('.select').removeClass('select--open');
 		});
 	};
 
@@ -276,34 +276,40 @@ $(document).ready(function () {
 
 	let productSlider = function () {
 		$('.js-product-slider-dots').slick({
-				asNavFor: '.js-product-slider',
-				slidesToShow: 3,
-				slidesToScroll: 1,
-				vertical: true,
-				prevArrow: '.product-slider-dots__btn--prev',
-				nextArrow: '.product-slider-dots__btn--next',
-				focusOnSelect: true,
-				infinite: false,
-				responsive: [
-						{
-								breakpoint: 768,
-								settings: "unslick"
-						}
-				]
+			asNavFor: '.js-product-slider',
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			vertical: true,
+			prevArrow: '.product-slider-dots__btn--prev',
+			nextArrow: '.product-slider-dots__btn--next',
+			focusOnSelect: true,
+			infinite: false,
+			responsive: [
+				{
+					breakpoint: 768,
+					settings: "unslick"
+				}
+			]
 		});
 
 		$('.js-product-slider').slick({
-				asNavFor: '.js-product-slider-dots',
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				arrows: false,
-				infinite: false
+			asNavFor: '.js-product-slider-dots',
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			infinite: false
 		});
 	};
 
 	let colorClicked = function () {
 		$(document).on('click', '.color-list__item', function () {
 				$(this).addClass('color-list__item--active').siblings().removeClass('color-list__item--active');
+		});
+	};
+
+	let filterColorClicked = function () {
+		$(document).on('click', '.filter-color__item', function () {
+				$(this).addClass('filter-color__item--active').siblings().removeClass('filter-color__item--active');
 		});
 	};
 
@@ -353,6 +359,44 @@ $(document).ready(function () {
 		}
 	};
 
+	let popupLink = function () {
+		$('.js-popup-link').magnificPopup({
+			showCloseBtn: false,
+		});
+
+		$(document).on('click', '.popup__close', function () {
+			$.magnificPopup.close();
+		});
+	};
+
+	let popupImageLink = function () {
+		$('.product-slider').magnificPopup({
+			type: 'image',
+			closeOnContentClick: true,
+			delegate: '.product-slider__link',
+			gallery: {
+				enabled: true,
+				navigateByImgClick: true,
+				preload: [0, 1],
+				tCounter: '<span class="mfp-counter">%curr% из %total%</span>'
+			}
+		});
+	};
+	
+	let popupLogoLink = function () {
+		$('.brand-info').magnificPopup({
+			type: 'image',
+			closeOnContentClick: true,
+			delegate: '.brand-info__link',
+			gallery: {
+				enabled: true,
+				navigateByImgClick: true,
+				preload: [0, 1],
+				tCounter: '<span class="mfp-counter">%curr% из %total%</span>'
+			}
+		});
+	};
+
 	catalogNavHover();
 	openSearchForm();
 	clearSearchForm();
@@ -371,9 +415,13 @@ $(document).ready(function () {
 	filterToggle();
 	productSlider();
 	colorClicked();
+	filterColorClicked();
 	scrollToElement();
 	productDetailWidth();
 	productDetailTablet();
+	popupLink();
+	popupImageLink();
+	popupLogoLink();
 
 });
 

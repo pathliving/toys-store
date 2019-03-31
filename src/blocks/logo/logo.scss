@@ -1,7 +1,7 @@
 .logo {
   &__img {
 		height: 22px;
-		@media screen and (max-width: $phone-size) {
+		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
 			height: 16px;
 		}
 	}	
@@ -10,7 +10,7 @@
 .mobile {
 	&__logo {
 		display: none;
-		@media screen and (max-width: $phone-size) {
+		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
 			display: block;
 		}
 	}

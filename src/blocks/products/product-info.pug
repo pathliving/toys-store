@@ -5,7 +5,8 @@ mixin product-info()
 	.product-info
 		.product-info__header
 			h1.title-page Беговел Puky Pukylino
-			img(src='img/puky.jpg' alt='Логотип бренда').product-info__logo
+			a(href='brand.html')
+				img(src='img/puky.jpg' alt='Логотип бренда').product-info__logo
 		.product-info__body
 			.product-info__row
 				.product-rating
@@ -22,13 +23,15 @@ mixin product-info()
 				.product-color
 					span.product__text Выберите цвет
 					ul.color-list
-						li.color-list__item.color-list__item--active(style=`background-color:#ff5ec9`)
-						li.color-list__item(style=`background-color:#7ed321`)
-						li.color-list__item(style=`background-color:#f5a623`)
+						li.color-list__item.color-list__item--active(style=`background-color:#f5a623`)
+						li.color-list__item(style=`background-color:#000000`)
+						li.color-list__item.color-list__item--white(style=`background-color:#ffffff`)
 				.product-available
 					span.product__text Наличие:
 					.product-available-view
-						each i in [1,2,3,4,5]
+						.product-available-view__item.product-available-view__item--active
+						.product-available-view__item.product-available-view__item--active
+						each i in [1,2,3]
 							.product-available-view__item
 			.product-info__row
 				.product-price

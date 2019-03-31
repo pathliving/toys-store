@@ -87,7 +87,7 @@ function compilePug() {
   const fileList = [
     `${dir.src}pages/**/*.pug`
   ];
-  if(!buildLibrary) fileList.push(`!${dir.src}pages/blocks-demo.pug`);
+  // if(!buildLibrary) fileList.push(`!${dir.src}pages/blocks-demo.pug`);
   return src(fileList)
     .pipe(plumber({
       errorHandler: function (err) {
@@ -111,7 +111,7 @@ function compilePugFast() {
   const fileList = [
     `${dir.src}pages/**/*.pug`
   ];
-  if(!buildLibrary) fileList.push(`!${dir.src}pages/blocks-demo.pug`);
+  // if(!buildLibrary) fileList.push(`!${dir.src}pages/blocks-demo.pug`);
   return src(fileList, { since: lastRun(compilePugFast) })
     .pipe(plumber({
       errorHandler: function (err) {
@@ -243,7 +243,7 @@ function compileSass() {
   const fileList = [
     `${dir.src}scss/style.scss`,
   ];
-  if(buildLibrary) fileList.push(`${dir.blocks}blocks-library/blocks-library.scss`);
+  // if(buildLibrary) fileList.push(`${dir.blocks}blocks-library/blocks-library.scss`);
   return src(fileList, { sourcemaps: true })
     .pipe(plumber({
       errorHandler: function (err) {
@@ -290,7 +290,7 @@ function buildJs() {
   const entryList = {
     'bundle': `./${dir.src}js/entry.js`,
   };
-  if(buildLibrary) entryList['blocks-library'] = `./${dir.blocks}blocks-library/blocks-library.js`;
+  // if(buildLibrary) entryList['blocks-library'] = `./${dir.blocks}blocks-library/blocks-library.js`;
   return src(`${dir.src}js/entry.js`)
     .pipe(plumber())
     .pipe(webpackStream({

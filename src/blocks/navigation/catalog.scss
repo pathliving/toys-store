@@ -15,9 +15,12 @@
 	&__item {
 		width: 360px;
     background-color: $white;
-    @media screen and (max-width: $tablet-size) {
+    @media screen and (min-device-width: $phone-size-small) and (max-device-width: $tablet-size) {
       width: auto;
-    }
+		}
+		&--short {
+			width: 215px;
+		}
 		&--shadow {
 			box-shadow: 5px 5px 10px -3px rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.05);
 		}

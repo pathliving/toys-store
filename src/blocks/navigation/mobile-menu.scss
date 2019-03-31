@@ -3,7 +3,7 @@
     .mobile-menu {
       &__content {
         display: block;
-        @media screen and (max-width: $phone-size) {
+        @media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
           left: 0;
         }
       }
@@ -12,6 +12,7 @@
   &__toggle {
     align-items: center;
     background-color: $blaze-orange;
+    border-radius: 4px;
     color: $white;
     cursor: pointer;
     display: flex;
@@ -19,12 +20,12 @@
     height: 50px;
     & > * {
       margin-right: 20px;
-      @media screen and (max-width: $phone-size) {
+      @media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
         margin-right: 0;
       }
       &:last-child { margin-right: 0; }
     }
-    @media screen and (max-width: $phone-size) {
+    @media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
       @include size(50px);
       background-color: $white;
       border-right: 1px solid rgba(75, 75, 75, 0.2);
@@ -35,7 +36,7 @@
     }
     .mobile-menu {
       &__title {
-        @media screen and (max-width: $phone-size) {
+        @media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
           display: none;
         }
       }
@@ -55,7 +56,7 @@
     transition: all linear 0.5s;
     top: 0;
     z-index: 5;
-    @media screen and (max-width: $phone-size) {
+    @media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
       bottom: 0;
       box-shadow: none;
       display: block;

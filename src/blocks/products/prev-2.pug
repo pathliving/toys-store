@@ -4,12 +4,14 @@ mixin prev-2()
 		.product-prev__header
 			.js-product-prev__slider
 				.product-prev__img-wrapper(data-color="#7ed321")
-					img(src="img/prev-2.1.jpg" alt="Изображение товара").product-prev__img
+					a(class='product-prev__img-wrapper' href='product.html')
+						img(src="img/prev-2.1.jpg" alt="Изображение товара").product-prev__img
 				.product-prev__img-wrapper(data-color="#ff3854")
-					img(src="img/prev-2.2.jpg" alt="Изображение товара").product-prev__img
+					a(class='product-prev__img-wrapper' href='product.html')
+						img(src="img/prev-2.2.jpg" alt="Изображение товара").product-prev__img
 		.product-prev__body
 			.product-prev__info
-				span.product-prev__title Беговел Puky LR Ride
+				a(href='product.html' class='product-prev__title') Беговел Puky LR Ride
 				span.product-prev__country Германия
 			.product-prev__price
 				span.product-prev__price-current 5 450 грн.
