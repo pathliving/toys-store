@@ -121,4 +121,7 @@
 
 .s-content {
   margin: 25px 0 35px 0;
+  @media screen and (min-device-width: $phone-size-small) and (max-device-width: $tablet-size) {
+    margin: 15px 0 35px 0;
+  }
 }

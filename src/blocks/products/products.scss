@@ -6,8 +6,10 @@
 	color: $tundora;
 	&__header {
 		display: flex;
-		flex-direction: column;
 		margin-bottom: 10px;
+		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+			flex-direction: column;
+		}
 		& > * {
 			flex: 0 0 calc(50% - 15px);
 			width: calc(50% - 15px);
