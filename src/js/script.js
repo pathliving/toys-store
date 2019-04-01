@@ -286,6 +286,13 @@ $(document).ready(function () {
 			infinite: false,
 			responsive: [
 				{
+					breakpoint: 1140,
+					settings: {						
+						slidesToShow: 2,
+						slidesToScroll: 1
+					}
+				},
+				{
 					breakpoint: 768,
 					settings: "unslick"
 				}

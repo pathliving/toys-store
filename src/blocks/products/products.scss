@@ -5,12 +5,9 @@
 .product {
 	color: $tundora;
 	&__header {
-		display: flex;    
-		margin-bottom: 50px;
-		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
-			flex-direction: column;
-			margin-bottom: 20px;
-		}
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 10px;
 		& > * {
 			flex: 0 0 calc(50% - 15px);
 			width: calc(50% - 15px);

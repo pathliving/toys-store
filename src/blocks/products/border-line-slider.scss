@@ -1,13 +1,11 @@
 .products-border-line-slider {
 	border-bottom: 1px solid $alto;
 	padding-bottom: 30px;
-	margin-bottom: 27px;
 	@media screen and (min-device-width: $phone-size-small) and (max-device-width: $tablet-size) {
 		padding-bottom: 20px;
-		margin-bottom: 20px;
 	}
-  &__header {
-    align-items: center;
+	&__header {
+		align-items: center;
 		display: flex;
 		margin-bottom: 20px;
 		.title-section {
@@ -18,8 +16,8 @@
 		margin: 0 -15px;
 	}
 	&__navigation {
-    display: flex;
-    margin-left: auto;
+		display: flex;
+		margin-left: auto;
 	}
 	.product-prev {
 		margin: 0 15px;
@@ -33,16 +31,16 @@
 		border: 1px solid $alto;
 		cursor: pointer;
 		display: flex;
-    justify-content: center;
-    &.products-border-line-slider__btn {
-      &--prev {
+		justify-content: center;
+		&.products-border-line-slider__btn {
+			&--prev {
 				border-radius: 2px 0 0 2px;
 				border-right: 0;
-      }
-      &--next {
+			}
+			&--next {
 				border-radius: 0 2px 2px 0;
-      }
-    }
+			}
+		}
 	}
 	&__icon {
 		@include size(15px);

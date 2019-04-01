@@ -4,6 +4,9 @@
 		padding-left: 100px;
 		position: relative;
 		overflow: hidden;
+		// @media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+		// 	padding-bottom: 110px;
+		// }
 		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
 			padding-left: 0;
 			margin-right: 0;
@@ -58,4 +61,7 @@
 
 .s-slider {
 	outline: none;
+  @media screen and (min-device-width: $phone-size-small) and (max-device-width: $tablet-size) {  
+    margin-top: 20px;
+  }
 }

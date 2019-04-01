@@ -24,7 +24,7 @@
 		}
 		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $tablet-size) {
 			display: block;
-			top: 0;
+			top: 1px;
 		}
 	}
 	&__body {
@@ -110,7 +110,7 @@
 			&--active {
 				&:before {
 					display: block;
-    			border: 1px solid $tundora;
+					border: 1px solid $tundora;
 				}
 			}
 			&.filter-color__item--white {
