@@ -36,7 +36,7 @@ View pages
 Example
 ---
 
-<img src="https://raw.githubusercontent.com/pathliving/toys-store/gh-pages/example/index.png" width="900">
+<img src="example/index.png" width="900">
 
 Built with
 ---
