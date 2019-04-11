@@ -30,10 +30,10 @@
 }
 
 .s-hits {
-  @media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+  @media screen and (min-width: $phablet-size) and (max-width: $tablet-size) {
     padding: 0 0 45px 0;
   }
-  @media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+  @media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
     margin-bottom: 15px;
   }
 }

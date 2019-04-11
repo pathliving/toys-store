@@ -9,7 +9,7 @@
     display: inline-block;
     padding: 0 15px;
     width: 100%;
-    @media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+    @media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 			padding: 0 15px 20px 15px;
 		}
   }

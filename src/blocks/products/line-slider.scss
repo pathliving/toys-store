@@ -3,7 +3,7 @@
 		align-items: center;
 		display: none;
 		justify-content: space-between;
-		@media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+		@media screen and (min-width: $phablet-size) and (max-width: $tablet-size) {
 			display: flex;
 		}
 	}

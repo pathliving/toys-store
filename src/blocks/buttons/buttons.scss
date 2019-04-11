@@ -74,7 +74,7 @@
 			height: 30px;
 			line-height: 28px;
 			padding: 0 15px;
-			@media screen and (min-device-width: $phone-size-small) and (max-device-width: $tablet-size) {
+			@media screen and (min-width: $phone-size-small) and (max-width: $tablet-size) {
 				padding: 0 8px;
 			}
 		}

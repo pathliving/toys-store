@@ -37,20 +37,21 @@ block content
 		.category
 			.category__header
 				h1.title-page Беговелы
-				.filter-mobile__toggle
-					span Фильтры
-					+icon('chevron-right', 'filter-mobile__toggle-icon')
-				.category__sort
-					.select
-						.select__header.select__header--multi
-							span.select__description Сортировать по:
-							span.select__current популярности
-							+icon('chevron-down', 'select__icon')
-						.select__body
-							ul.select-list
-								li.select-list__item возрастанию цены
-								li.select-list__item снижению цены
-								li.select-list__item новизне
+				.category__toggles
+					.filter-mobile__toggle
+						span Фильтры
+						+icon('chevron-right', 'filter-mobile__toggle-icon')
+					.category__sort
+						.select
+							.select__header.select__header--multi
+								span.select__description Сортировать по:
+								span.select__current популярности
+								+icon('chevron-down', 'select__icon')
+							.select__body
+								ul.select-list
+									li.select-list__item возрастанию цены
+									li.select-list__item снижению цены
+									li.select-list__item новизне
 			.category__body
 				aside.filter.category__filter
 					.filter-mobile__close

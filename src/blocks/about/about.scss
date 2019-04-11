@@ -1,6 +1,6 @@
 .about {
-	display: flex;	
-	@media screen and (min-device-width: $phone-size-small) and (max-device-width: $tablet-size) {
+	display: flex;
+	@media screen and (min-width: $phone-size-small) and (max-width: $tablet-size) {
 		flex-direction: column;
 	}
 	& > * {
@@ -10,11 +10,11 @@
 	&__body {
 		flex: 1;
 		min-height: 245px;
-		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $tablet-size) {
+		@media screen and (min-width: $phone-size-small) and (max-width: $tablet-size) {
 			order: 2;
 			min-height: 190px;
 		}
-		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+		@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 			min-height: 225px;
 		}
 		.tab {
@@ -28,7 +28,7 @@
 	&-navigation {
 		flex: 0 0 255px;
 		width: 255px;
-		@media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+		@media screen and (min-width: $phablet-size) and (max-width: $tablet-size) {
 			text-align: center;
 			display: flex;
 			order: 1;
@@ -36,7 +36,7 @@
 			margin-bottom: 30px;
 			width: 100%;
 		}
-		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+		@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 			display: flex;
 			flex-direction: row;
 			overflow: auto;
@@ -48,18 +48,18 @@
 			height: 50px;
       min-width: 150px;
 			padding-left: 10px;
-			@media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+			@media screen and (min-width: $phablet-size) and (max-width: $tablet-size) {
 				flex: 1;
 				margin-right: 30px;
 				padding-left: 0;
 			}
-			@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+			@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 				margin-right: 20px;
 				padding: 0;
 				text-align: center;
 			}
 			&:last-child {
-				@media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+				@media screen and (min-width: $phablet-size) and (max-width: $tablet-size) {
 					margin-right: 30px;
 				}
 			}
@@ -76,7 +76,7 @@
 .s-about {
 	padding: 30px 0 30px 0;
 	font-size: $base-font-size - 2px;
-	@media screen and (min-device-width: $phone-size-small) and (max-device-width: $tablet-size) {
+	@media screen and (min-width: $phone-size-small) and (max-width: $tablet-size) {
 		padding: 30px 0 40px 0;
 	}
 }

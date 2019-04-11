@@ -4,7 +4,7 @@
     line-height: 1.79;
     margin-bottom: 15px;
     width: 340px;
-    @media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+    @media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
       font-size: $base-font-size - 4px;
       width: 100%;
     }

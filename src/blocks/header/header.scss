@@ -5,7 +5,7 @@
 
 .header {
 	border-bottom: 1px solid $athens-gray;
-	@media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+	@media screen and (min-width: $phablet-size) and (max-width: $tablet-size) {
 		border-bottom: 0;
 	}
 	&__nav {
@@ -18,9 +18,9 @@
 	&__top {
 		background-color: $athens-gray;
 		padding: 10px 0;
-		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+		@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 			display: none;
-		}	
+		}
 	}
 	&__content {
 		align-items: center;
@@ -28,7 +28,7 @@
 	}
 	&__main {
 		padding: 25px 0 15px 0;
-		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+		@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 			display: none;
 		}
 	}
@@ -64,17 +64,17 @@
 		margin-left: auto;
 	}
 	&__menu {
-		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $tablet-size) {
+		@media screen and (min-width: $phone-size-small) and (max-width: $tablet-size) {
 			display: none;
 		}
 	}
 	&__item {
-		@media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+		@media screen and (min-width: $phablet-size) and (max-width: $tablet-size) {
 			display: none;
 		}
 		&.header__item {
 			&--mobile {
-				@media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+				@media screen and (min-width: $phablet-size) and (max-width: $tablet-size) {
 					display: block;
 				}
 			}

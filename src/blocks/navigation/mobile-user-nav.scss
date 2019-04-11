@@ -1,7 +1,7 @@
 .mobile-user-nav {
   display: none;
   margin-left: auto;
-  @media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+  @media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
     display: block;
   }
   &__list {

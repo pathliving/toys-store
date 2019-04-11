@@ -3,29 +3,40 @@
 		align-items: center;
 		display: flex;
 		margin-bottom: 20px;
-		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+		@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 			flex-wrap: wrap;
 			vertical-align: middle;
 			width: 100%;
 		}
 		.title-page {
 			margin-bottom: 0;
-			@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+			@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 				margin-right: auto;
-				margin-bottom: 5px;
+				margin-bottom: 7px;
 			}
+		}
+	}
+	&__toggles {
+		display: flex;
+		margin-left: auto;
+		@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
+			justify-content: space-between;
+		}
+		@media screen and (min-width: $phone-size-small) and (max-width: 570px) {
+			margin-left: 0;
 		}
 	}
 	&__sort {
 		margin-left: auto;
 		margin-top: 5px;
-		@media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+		min-width: 188px;
+		@media screen and (min-width: $phablet-size) and (max-width: $tablet-size) {
 			margin-left: 0;
 			margin-right: 0;
 		}
-		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+		@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 			margin-top: -5px;
-			margin-left: auto;
+			margin-left: 5px;
 		}
 	}
 	&__body {
@@ -49,7 +60,7 @@
 
 .s-category {
 	&-slider {
-		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+		@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 			display: none;
 		}
 		.container {
@@ -59,7 +70,7 @@
 	&-main {
 		margin-right: -13px;
 		padding-top: 0;
-		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+		@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 			margin-right: 0;
 		}
 	}

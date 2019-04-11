@@ -5,7 +5,7 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 		margin-bottom: -30px;
-		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $tablet-size) {
+		@media screen and (min-width: $phone-size-small) and (max-width: $tablet-size) {
 			margin-bottom: -10px;
 		}
 		& > * {
@@ -13,19 +13,19 @@
 			margin-bottom: 23px;
 			flex: 0 0 28%;
 			width: 28%;
-			@media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+			@media screen and (min-width: $phablet-size) and (max-width: $tablet-size) {
 				margin-bottom: 0;
 				flex: 0 0 25%;
 				width: 25%;
 			}
-			@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+			@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 				margin-bottom: 0;
 				margin-right: 0;
 				flex: 0 0 45%;
 				width: 45%;
 			}
 		}
-		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+		@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 			justify-content: flex-start;
 		}
 	}
@@ -58,16 +58,16 @@
 		display: flex;
 		padding-bottom: 30px;
 		margin-bottom: 27px;
-		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+		@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 			flex-direction: column;
 		}
-		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $tablet-size) {
+		@media screen and (min-width: $phone-size-small) and (max-width: $tablet-size) {
 			padding-bottom: 20px;
 			margin-bottom: 20px;
 		}
 		& > * {
 			margin-right: 30px;
-			@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+			@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 				margin-right: 0;
 			}
 			&:last-child {
@@ -77,7 +77,7 @@
 		&__tablet {
 			flex: 0 0 255px;
 			width: 255px;
-			@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+			@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 				flex: 1;
 				width: 100%;
 			}
@@ -114,9 +114,9 @@
 		flex: 1;
 		& > * {
 			margin-bottom: 20px;
-			margin-top: -5px;	
+			margin-top: -5px;
 			&:first-child {
-				@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+				@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 					margin-top: 20px;
 				}
 			}
@@ -127,7 +127,7 @@
 		flex: 0 0 210px;
 		width: 210px;
 		margin-top: -10px;
-		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+		@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 			flex: 1;
 			margin-top: 0;
 			text-align: center;
@@ -148,7 +148,7 @@
 		border-radius: 2px;
 		display: flex;
 		justify-content: center;
-		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+		@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 			border: none;
 		}
 		&-img {
@@ -157,7 +157,7 @@
 		}
 	}
 	&__content-block {
-		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+		@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 			padding-bottom: 0;
 		}
 	}

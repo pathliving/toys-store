@@ -47,7 +47,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    @media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+    @media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 			display: none;
 		}
     & > * {

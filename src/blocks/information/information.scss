@@ -8,20 +8,20 @@
 
 .information {
 	display: flex;
-	@media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+	@media screen and (min-width: $phablet-size) and (max-width: $tablet-size) {
 		flex-wrap: wrap;
 	}
-	@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+	@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 		flex-direction: column;
 	}
 	& > * {
 		flex: 1;
 		padding-right: 30px;
-		@media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+		@media screen and (min-width: $phablet-size) and (max-width: $tablet-size) {
 			flex: 0 0 50%;
 			width: 50%;
 		}
-		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+		@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 			flex: 1;
 			width: 100%;
 		}
@@ -33,7 +33,7 @@
 		}
 		&__body {
 			height: auto;
-			@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+			@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 				height: auto;
 				margin-bottom: 0;
 			}
@@ -45,7 +45,7 @@
 			font-size: $base-font-size - 2px;
 			&-news {
 				margin-top: 41px;
-				@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+				@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 					margin-top: 30px;
 				}
 			}
@@ -54,13 +54,13 @@
 			}
 			&-brands {
 				margin-top: 10px;
-				@media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+				@media screen and (min-width: $phablet-size) and (max-width: $tablet-size) {
 					margin-top: 0;
 				}
 			}
 			&-count {
 				margin-top: 10px;
-				@media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+				@media screen and (min-width: $phablet-size) and (max-width: $tablet-size) {
 					margin-top: 0;
 				}
 			}
@@ -77,7 +77,7 @@
 			}
 		}
 		&.information-item--wide {
-			@media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+			@media screen and (min-width: $phablet-size) and (max-width: $tablet-size) {
 				flex: 1;
 				width: 100%;
 			}

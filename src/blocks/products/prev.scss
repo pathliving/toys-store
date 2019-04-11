@@ -10,7 +10,7 @@
 		box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.05)
 	}
 	&__header {
-		left: 20px; 
+		left: 20px;
 		height: 160px;
 		position: absolute;
 		right: 20px;
@@ -108,20 +108,20 @@
       & > * {
         min-width: 29%;
         max-width: calc(34% - 30px);
-        @media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+        @media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
           flex: 0 0 100%;
           margin-right: 0;
           max-width: 100%;
         }
         &:nth-child(4n + 4) {
           margin-right: 30px;
-          @media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+          @media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
             margin-right: 0;
           }
         }
         &:nth-child(3n + 3) {
           margin-right: 0;
-          @media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+          @media screen and (min-width: $phablet-size) and (max-width: $tablet-size) {
             margin-right: 0;
           }
         }
@@ -130,33 +130,33 @@
         display: flex;
       }
     }
-  }  
+  }
   & > * {
     flex: auto;
     margin-right: 30px;
     margin-bottom: 30px;
     min-width: 20%;
     max-width: calc(26% - 30px);
-    @media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+    @media screen and (min-width: $phablet-size) and (max-width: $tablet-size) {
       min-width: 30%;
       max-width: calc(34% - 30px);
     }
-    @media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+    @media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
       flex: 0 0 100%;
       margin-right: 0;
       max-width: 100%;
     }
     &:nth-child(4n + 4) {
       margin-right: 0;
-      @media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+      @media screen and (min-width: $phablet-size) and (max-width: $tablet-size) {
         margin-right: 30px;
       }
-      @media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+      @media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
         margin-right: 0;
       }
     }
     &:nth-child(3n + 3) {
-      @media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+      @media screen and (min-width: $phablet-size) and (max-width: $tablet-size) {
         margin-right: 0;
       }
     }

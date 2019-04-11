@@ -22,7 +22,7 @@
     font-size: $base-font-size + 3px;
     line-height: 1.58;
     padding: 10px 20px;
-    text-align: center; 
+    text-align: center;
   }
   &__item {
     font-size: $base-font-size - 4px;
@@ -43,10 +43,10 @@
     justify-content: center;
     position: absolute;
     width: 100%;
-    @media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+    @media screen and (min-width: $phablet-size) and (max-width: $tablet-size) {
       display: flex;
     }
-    @media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+    @media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
       margin-bottom: 2px;
     }
     .slick-dots {

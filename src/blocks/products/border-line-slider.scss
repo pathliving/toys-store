@@ -1,8 +1,8 @@
 .products-border-line-slider {
 	border-bottom: 1px solid $alto;
 	padding-bottom: 30px;
-	margin-bottom: 30px;
-	@media screen and (min-device-width: $phone-size-small) and (max-device-width: $tablet-size) {
+	margin-bottom: 20px;
+	@media screen and (min-width: $phone-size-small) and (max-width: $tablet-size) {
 		padding-bottom: 20px;
 		margin-bottom: 15px;
 	}

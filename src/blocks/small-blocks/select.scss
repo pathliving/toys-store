@@ -22,7 +22,7 @@
 		font-size: $base-font-size - 4px;
 		height: 40px;
 		padding: 0 15px;
-		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+		@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 			margin-top: 5px;
 		}
 		& > * {
@@ -37,7 +37,7 @@
 				}
 			}
 		}
-	}  
+	}
 	&__icon {
 		@include size(12px);
 		fill: $blaze-orange;
@@ -59,6 +59,9 @@
 	}
 	&__description {
 		margin-bottom: 2px;
+		@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
+			display: none;
+		}
 	}
 	&-list {
 		&__item {

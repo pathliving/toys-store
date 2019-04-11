@@ -7,24 +7,24 @@
 	&__header {
 		display: flex;
 		margin-bottom: 10px;
-		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+		@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 			flex-direction: column;
 		}
 		& > * {
 			flex: 0 0 calc(50% - 15px);
 			width: calc(50% - 15px);
-			@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+			@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 				flex: 0 0 100%;
 				width: 100%;
 			}
 			&:last-child, &:first-child {
-				@media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+				@media screen and (min-width: $phablet-size) and (max-width: $tablet-size) {
 					flex: 0 0 100%;
 					width: 100%;
 				}
 			}
 		}
-		@media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+		@media screen and (min-width: $phablet-size) and (max-width: $tablet-size) {
 			flex-wrap: wrap;
 		}
 	}
@@ -33,7 +33,7 @@
 	}
 	&-info {
 		margin-left: 15px;
-		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+		@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 			margin-left: 0;
 		}
 		&__header {
@@ -47,7 +47,7 @@
 		}
 		&__body {
 			margin-bottom: 50px;
-			@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+			@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 				margin-bottom: 0;
 			}
 			& > * {
@@ -57,12 +57,12 @@
 			}
 		}
 		&__footer {
-			@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+			@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 				display: none;
 			}
 		}
 		&__logo {
-			@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+			@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 				display: none;
 			}
 		}
@@ -71,7 +71,7 @@
 			display: flex;
 			justify-content: space-between;
 			&:last-child {
-				@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+				@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 					flex-direction: column;
 				}
 			}
@@ -91,7 +91,7 @@
 				flex: 1;
 				margin-right: 15px;
 				&:last-child { margin-right: 0; }
-			} 
+			}
 		}
 		&-advantage {
 			&__header {
@@ -157,7 +157,7 @@
 	&-available {
 		align-items: center;
 		display: flex;
-		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+		@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 			display: none;
 		}
 		& > * {
@@ -187,7 +187,7 @@
 		align-items: flex-start;
 		display: flex;
 		flex-direction: column;
-		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+		@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 			margin-right: auto;
 			margin-bottom: 20px;
 		}
@@ -206,10 +206,10 @@
 	&-actions {
 		align-items: center;
 		display: flex;
-		@media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+		@media screen and (min-width: $phablet-size) and (max-width: $tablet-size) {
 			flex-direction: column;
 		}
-		@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+		@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 			flex-direction: row;
 			flex: 0 0 100%;
 			margin-top: 3px;
@@ -217,17 +217,17 @@
 		}
 		& > * {
 			margin-right: 20px;
-			@media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+			@media screen and (min-width: $phablet-size) and (max-width: $tablet-size) {
 				margin-right: 0;
 				margin-bottom: 20px;
 			}
-			@media screen and (min-device-width: $phone-size-small) and (max-device-width: $phablet-size) {
+			@media screen and (min-width: $phone-size-small) and (max-width: $phablet-size) {
 				margin-right: 20px;
 				margin-bottom: 0;
 			}
 			&:last-child {
 				margin-right: 0;
-				@media screen and (min-device-width: $phablet-size) and (max-device-width: $tablet-size) {
+				@media screen and (min-width: $phablet-size) and (max-width: $tablet-size) {
 					margin-bottom: 0;
 				}
 			}
